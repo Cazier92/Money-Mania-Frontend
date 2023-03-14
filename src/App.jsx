@@ -8,6 +8,12 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import Home from './pages/Home/Home'
+import Categories from './pages/Categories/Categories'
+import GamePage from './pages/GamePage/GamePage'
+import Achievements from './pages/Achievements/Achievements'
+import Settings from './pages/SettingsPage/Settings'
+import Profile from './pages/Profile/Profile'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -38,7 +44,7 @@ const App = () => {
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" 
-          element={<Landing user={user} handleLogout={handleLogout} />} 
+          element={<Landing user={user} />} 
           />
         <Route
           path="/signup"
@@ -61,6 +67,54 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
               <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/home"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/categories"
+          element={
+            <ProtectedRoute>
+              <Categories />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/gamepage"
+          element={
+            <ProtectedRoute>
+              <GamePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/achievements"
+          element={
+            <ProtectedRoute>
+              <Achievements />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <Settings />
             </ProtectedRoute>
           }
         />

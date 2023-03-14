@@ -1,6 +1,6 @@
 import QuestionCard from "../../components/QuestionCard/QuestionCard";
 
-const gamePage = () => {
+const GamePage = () => {
   return ( 
     <>
     <h1>this is gamePage page</h1>
@@ -9,4 +9,4 @@ const gamePage = () => {
   );
 }
 
-export default gamePage;
+export default GamePage;
