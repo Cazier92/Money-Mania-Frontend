@@ -1,9 +1,14 @@
+import Banner from "../../components/Banner/Banner";
+
 const Home = () => {
-  return (
-    <>
-      <h1>this is Home page</h1>
-    </>
-  );
+    return (
+        <>
+            <Banner />
+            <h1>🐖</h1>
+            <button>Continue Trivia</button>
+            <button>Change Category</button>
+        </>
+    );
 }
 
 export default Home;
