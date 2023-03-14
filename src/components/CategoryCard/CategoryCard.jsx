@@ -1,12 +1,16 @@
 import styles from './CategoryCard.module.css'
 
-const CategoryCard = () => {
+const CategoryCard = ({setCurrentCategory}) => {
   const categories = ["Taxes", "Insurance", "Economics", "Stock Markets", "Global Finance", "Personal Finance" ]
+
+  const handleClick = (category) => {
+    setCurrentCategory(category)
+  }
 
   return ( 
     <main className={styles.categoryList}>
     {categories.map((category) => 
-      <p className={styles.category}>{category}</p>
+      <p className={styles.category} onClick={handleClick(category)}>{category}</p>
     )}
     </main>
   );
