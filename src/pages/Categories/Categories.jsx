@@ -1,10 +1,12 @@
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
+import styles from './Categories.module.css'
+
 const Categories = () => {
   return ( 
-    <>
-    <h1>This is Categories Page</h1>
+    <main>
+    <h1 className={styles.title}>Categories</h1>
     <CategoryCard/>
-    </>
+    </main>
 
   );
 }
