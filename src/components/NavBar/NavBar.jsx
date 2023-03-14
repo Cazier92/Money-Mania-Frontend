@@ -16,27 +16,27 @@ const NavBar = ({ user, handleLogout }) => {
         <div className='bottom-nav'>
           <Link style={linkStyle} to='/home'>
             <div id='bt-icon-container'>
-              <i id='bt-icon' class='fa-solid fa-house'></i>
+              <i id='bt-icon' className='fa-solid fa-house'></i>
             </div>
           </Link>
           <Link style={linkStyle} to='/leaderboard'>
             <div id='bt-icon-container'>
-              <i id='bt-icon' class="fa-solid fa-chart-simple"></i>
+              <i id='bt-icon' className="fa-solid fa-chart-simple"></i>
             </div>
           </Link>
           <Link style={linkStyle} to='/achievements'>
             <div id='bt-icon-container'>
-              <i id='bt-icon' class="fa-solid fa-medal"></i>
+              <i id='bt-icon' className="fa-solid fa-medal"></i>
             </div>
           </Link>
           <Link style={linkStyle} to='/profile'>
             <div id='bt-icon-container'>
-              <i id="bt-icon" class="fa-solid fa-user "></i>
+              <i id="bt-icon" className="fa-solid fa-user "></i>
             </div>
           </Link>
           <Link style={linkStyle} to='/settings'>
             <div id='bt-icon-container'>
-              <i id="bt-icon" class="fa-solid fa-gear"></i>
+              <i id="bt-icon" className="fa-solid fa-gear"></i>
             </div>
           </Link>
         </div>
@@ -48,17 +48,17 @@ const NavBar = ({ user, handleLogout }) => {
         <div className='bottom-nav'>
           <Link style={linkStyle} to='/'>
             <div id='bt-icon-container'>
-              <i id='bt-icon' class='fa-solid fa-house'></i>
+              <i id='bt-icon' className='fa-solid fa-house'></i>
             </div>
           </Link>
           <Link style={linkStyle} to='/profile'>
             <div id='bt-icon-container'>
-              <i id="bt-icon" class="fa-solid fa-user "></i>
+              <i id="bt-icon" className="fa-solid fa-user "></i>
             </div>
           </Link>
           <Link style={linkStyle} to='/settings'>
             <div id='bt-icon-container'>
-              <i id="bt-icon" class="fa-solid fa-gear"></i>
+              <i id="bt-icon" className="fa-solid fa-gear"></i>
             </div>
           </Link>
         </div>

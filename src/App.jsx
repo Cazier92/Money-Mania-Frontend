@@ -32,25 +32,45 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const [userProfile, setUserProfile] = useState()
   const [allTrivia, setAllTrivia] = useState([])
+  const [currentCategory, setCurrentCategory] = useState('')
+  const [currentTrivia, setCurrentTrivia] = useState({})
 
 
   const navigate = useNavigate()
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const profileData = await profileService.show(user?.profile)
-      setUserProfile(profileData)
+      if(user) {
+        const profileData = await profileService.show(user?.profile)
+        setUserProfile(profileData)
+      }
     }
     fetchProfile()
   }, [user])
 
   useEffect(() => {
     const fetchTrivia = async () => {
-      const triviaData = await triviaService.index()
-      setAllTrivia(triviaData)
+      if (user) {
+        const triviaData = await triviaService.index()
+        setAllTrivia(triviaData)
+      }
     }
     fetchTrivia()
   }, [user])
+
+  useEffect(() => {
+    if (currentCategory !== '' && allTrivia) {
+      let catTrivia = []
+      allTrivia.forEach(q => {
+        if (q.category === currentCategory) {
+          catTrivia.push(q)
+        }
+      })
+      let i = Math.floor(Math.random() * catTrivia.length)
+      setCurrentTrivia(catTrivia[i])
+    }
+  }, [user, allTrivia, currentCategory])
+
 
   const handleLogout = () => {
     authService.logout()
@@ -61,6 +81,8 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
+
+
 
 
   return (
@@ -106,7 +128,7 @@ const App = () => {
           path="/categories"
           element={
             <ProtectedRoute>
-              <Categories />
+              <Categories setCurrentCategory={setCurrentCategory}/>
             </ProtectedRoute>
           }
         />
@@ -114,7 +136,7 @@ const App = () => {
           path="/gamepage"
           element={
             <ProtectedRoute>
-              <GamePage />
+              <GamePage currentTrivia={currentTrivia}/>
             </ProtectedRoute>
           }
         />
