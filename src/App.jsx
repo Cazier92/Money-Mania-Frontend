@@ -98,9 +98,9 @@ const App = () => {
         <Route 
           path="/profile"
           element={
-            // <ProtectedRoute>
+            <ProtectedRoute>
               <Profile />
-            // </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route 
