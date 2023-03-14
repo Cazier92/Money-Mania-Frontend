@@ -97,17 +97,17 @@ const App = () => {
         <Route 
           path="/home"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Home />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route 
           path="/categories"
           element={
-            // <ProtectedRoute>
+            <ProtectedRoute>
               <Categories />
-            /* </ProtectedRoute> */
+            </ProtectedRoute>
           }
         />
         <Route 

@@ -1,9 +1,15 @@
+import Banner from "../../components/Banner/Banner";
+import PiggyBank from "../../components/PiggyBank/PiggyBank";
+
 const Home = () => {
-  return ( 
-    <>
-    <h1>this is Home page</h1>
-    </>
-   );
+    return (
+        <>
+            <Banner />
+            <PiggyBank />
+            <button>Continue Trivia</button>
+            <button>Change Category</button>
+        </>
+    );
 }
- 
+
 export default Home;
