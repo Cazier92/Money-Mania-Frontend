@@ -4,6 +4,9 @@
   margin: 20px;
   height: 100px;
   width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .categoryList{
