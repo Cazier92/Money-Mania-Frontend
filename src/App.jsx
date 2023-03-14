@@ -14,6 +14,7 @@ import GamePage from './pages/GamePage/GamePage'
 import Achievements from './pages/Achievements/Achievements'
 import Settings from './pages/SettingsPage/Settings'
 import Profile from './pages/Profile/Profile'
+import Leaderboard from './pages/Leaderboard/Leaderboard'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -106,7 +107,7 @@ const App = () => {
           path="leaderboard"
           element={
             <ProtectedRoute>
-              <Profile />
+              <Leaderboard />
             </ProtectedRoute>
           }
         />
