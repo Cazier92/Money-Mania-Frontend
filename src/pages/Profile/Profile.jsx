@@ -41,7 +41,33 @@ const Profile = () => {
       <FriendCard/>
       }
       {view === "stats" && 
-        <p>stats lol</p>
+      <div>
+        <div>
+          <h3>Total Questions Seen</h3>
+          <p>3</p>
+          <hr />
+        </div>
+        <div>
+          <h3>Correct Answers</h3>
+          <p>5</p>
+          <hr />
+        </div>
+        <div>
+          <h3>Best Streak</h3>
+          <p>2</p>
+          <hr />
+        </div>
+        <div>
+          <h3>Favorite Category</h3>
+          <p>Economics</p>
+          <hr />
+        </div>
+        <div>
+          <h3>Least Favorite Category</h3>
+          <p>Stock Market</p>
+        </div>
+      </div>
+        
       }
     </>
   );
