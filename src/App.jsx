@@ -41,7 +41,7 @@ const App = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       if(user) {
-        const profileData = await profileService.show(user?.profile)
+        const profileData = await profileService.show(user.profile)
         setUserProfile(profileData)
       }
     }
