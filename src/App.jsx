@@ -103,6 +103,14 @@ const App = () => {
           }
         />
         <Route 
+          path="leaderboard"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
           path="/achievements"
           element={
             <ProtectedRoute>

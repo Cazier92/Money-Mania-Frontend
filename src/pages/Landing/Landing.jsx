@@ -12,7 +12,7 @@ const Landing = ({ user }) => {
       {user ? 
       <>
         <div>
-          <button><Link to='/homepage'>Play</Link></button>
+          <button><Link to='/home'>Play</Link></button>
         </div>
       </> 
       : 
