@@ -1,10 +1,11 @@
 import Banner from "../../components/Banner/Banner";
+import PiggyBank from "../../components/PiggyBank/PiggyBank";
 
 const Home = () => {
     return (
         <>
             <Banner />
-            <h1>🐖</h1>
+            <PiggyBank />
             <button>Continue Trivia</button>
             <button>Change Category</button>
         </>
