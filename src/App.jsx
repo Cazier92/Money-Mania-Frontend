@@ -64,6 +64,24 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route 
+          path="/homepage"
+        />
+        <Route 
+          path="/categories"
+        />
+        <Route 
+          path="/game"
+        />
+        <Route 
+          path="/profile"
+        />
+        <Route 
+          path="/achievements"
+        />
+        <Route 
+          path="/settings"
+        />
       </Routes>
     </>
   )
