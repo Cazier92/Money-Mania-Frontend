@@ -1,0 +1,33 @@
+
+
+.bottom-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em 0 0.5em 0;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(200, 200, 200);
+  height: 4em;
+  min-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 20px;
+  transition: height ease 200ms;
+  bottom: 0;
+  z-index: 9999;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+
+
+/* @media screen and (max-width: 900px) {
+  .left-navbar,
+  .right-navbar {
+    display: none;
+  }
+
+  .bottom-navbar {
+    display: flex;
+  }
+} */
