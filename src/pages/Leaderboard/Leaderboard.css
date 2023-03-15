@@ -22,6 +22,7 @@ border: solid red;
 }
 
 .third{
+  /* border: solid red; */
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -32,9 +33,11 @@ border: solid red;
 .thirdStage{
   border: solid rgb(220, 150, 80);
   background-color:  rgb(226, 155, 84);;
-  padding: 20px 92% 0 0;
+  padding: 20px 24% 0 24%;
+  text-align: center;
 }
 .first{
+  /* border: solid red; */
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -45,10 +48,10 @@ border: solid red;
 .firstStage{
   border: solid rgb(255, 218, 117);
   background-color: rgb(254, 221, 130);
-  padding: 60px 92% 0 0;
+  padding: 60px 36% 0 36%;
 }
 .second{
-
+  /* border: solid red; */
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -58,5 +61,5 @@ border: solid red;
 .secondStage{
   border: solid rgb(187, 187, 187);
   background-color: rgb(182, 179, 179);
-  padding: 40px 92% 0 0;
+  padding: 40px 20% 0 20%;
 }

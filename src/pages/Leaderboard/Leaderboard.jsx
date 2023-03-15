@@ -8,17 +8,17 @@ const Leaderboard = () => {
         <div className="third">
           <img className="stageImage" src="https://imgur.com/OYCmlJW.jpg" alt="image" />
           <p className="stageText" >name</p>
-          <div className="thirdStage"></div>
+          <div className="thirdStage">3rd</div>
         </div>
         <div className="first">
           <img className="stageImage" src="https://imgur.com/OYCmlJW.jpg" alt="image" />
-          <p className="stageText">namethats</p>
-          <div className="firstStage"></div>
+          <p className="stageText">Christopher</p>
+          <div className="firstStage">1st</div>
         </div>
         <div className="second">
           <img className="stageImage" src="https://imgur.com/OYCmlJW.jpg" alt="image" />
           <p className="stageText">name</p>
-          <div className="secondStage"></div>
+          <div className="secondStage">2nd</div>
         </div>
     </div>
     </div>
