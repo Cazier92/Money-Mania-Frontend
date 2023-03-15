@@ -1,5 +1,5 @@
 import AchievementCard from "../../components/AchievementCard/AchievementCard";
-import styles from './Achievements.module.css'
+import './Achievements.css'
 
 const Achievements = (props) => {
     const { userProfile } = props
@@ -47,7 +47,7 @@ const Achievements = (props) => {
     return (
         <>
             <h1>Achievements</h1>
-            <p>{sumAchievements(userProfile)}/180</p>
+            <p className="achievement-total">{sumAchievements(userProfile)}/180</p>
             {achievements.map((achievement, idx) => <AchievementCard icon={achievement.icon} name={achievement.name} category={achievement.category} threshold={achievement.threshold} key={idx} userProfile={userProfile} />)}
         </>
     );
