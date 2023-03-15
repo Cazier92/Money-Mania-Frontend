@@ -3,10 +3,10 @@ import './Home.module.css'
 import Banner from "../../components/Banner/Banner";
 import PiggyBank from "../../components/PiggyBank/PiggyBank";
 
-const Home = ({currentCategory, handleChangeTrivia}) => {
+const Home = ({currentCategory, handleChangeTrivia, user}) => {
     return (
         <>
-            <Banner />
+            <Banner user={user} />
             <PiggyBank />
             {currentCategory ? 
             (<>
