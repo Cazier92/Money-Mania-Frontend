@@ -1,3 +1,57 @@
+/* body{
+  background-color: rgb(152, 219, 253);
+} */
+
+.settingsContainer{
+  padding-top: 6vh;
+}
+
+.flexSettings{
+
+  display: flex;
+  justify-content:space-between;
+  margin: 20px;
+  line-height: 40px;
+}
+
+.signOutContainer{
+display: flex;
+justify-content: center;
+margin-top: 14vh;
+
+}
+
+.signOut{
+  background-color: rgb(208, 20, 20);
+  box-shadow: 1px 1px 2px 1px rgba(158, 1, 1, 0.818);
+  color: rgb(222, 222, 222);
+  padding: 22px 120px;
+  border-radius: 4px;
+  border: none; 
+  font-size: 16px;
+  transition: 0.3s ease all;
+  
+}
+.signOut:hover{
+  background-color: rgb(229, 103, 103);
+  color: white;
+}
+
+.settingsTitle{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+
+.settingsTextTitle{
+  font-size: 26px;
+}
+
+.settingsText{
+  font-size: 22px;
+}
+
+
 .switch-toggle {
   display: flex;
   height: 100%;
@@ -13,8 +67,8 @@
 
 .button-check {
   position: relative;
-  width: 90px;
-  height: 46px;
+  width: 80px;
+  height: 40px;
   overflow: hidden;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -39,16 +93,16 @@
 
 .layer {
   width: 100%;
-  background-color: #8cf7a0;
+  background-color: #46a556;
   transition: 0.3s ease all;
   z-index: 1;
 }
-#button-check .switch-btn:before, #button-check .switch-btn:after, #button-check1 .switch-btn:before, #button-check1 .switch-btn:after {
+#button-check .switch-btn:before, #button-check .switch-btn:after, #button-check1 .switch-btn:before, #button-check1 .switch-btn:after, #button-check2 .switch-btn:before, #button-check2 .switch-btn:after, #button-check3 .switch-btn:before, #button-check3 .switch-btn:after {
   position: absolute;
   top: 4px;
   left: 4px;
   width: 30px;
-  height: 20px;
+  height: 14px;
   color: #fff;
   font-size: 10px;
   font-weight: bold;
@@ -63,28 +117,28 @@
   justify-content: center;
 }
 
-#button-check .switch-btn:before, #button-check1 .switch-btn:before  {
+#button-check .switch-btn:before, #button-check1 .switch-btn:before, #button-check2 .switch-btn:before, #button-check3 .switch-btn:before  {
   content: '';
 }
 
-#button-check .switch-btn:after, #button-check1 .switch-btn:after {
+#button-check .switch-btn:after, #button-check1 .switch-btn:after, #button-check2 .switch-btn:after, #button-check3 .switch-btn:after {
   content: '';
 }
 
-#button-check .switch-btn:after, #button-check1 .switch-btn:after {
+#button-check .switch-btn:after, #button-check1 .switch-btn:after, #button-check2 .switch-btn:after, #button-check3 .switch-btn:after {
   right: -50px;
   left: auto;
   background-color: #ffffff;
 }
 
-#button-check .checkbox:checked + .switch-btn:before, #button-check1 .checkbox:checked + .switch-btn:before {
+#button-check .checkbox:checked + .switch-btn:before, #button-check1 .checkbox:checked + .switch-btn:before, #button-check2 .checkbox:checked + .switch-btn:before, #button-check3 .checkbox:checked + .switch-btn:before {
   left: -50px;
 }
 
-#button-check .checkbox:checked + .switch-btn:after, #button-check1 .checkbox:checked + .switch-btn:after {
+#button-check .checkbox:checked + .switch-btn:after, #button-check1 .checkbox:checked + .switch-btn:after, #button-check2 .checkbox:checked + .switch-btn:after, #button-check3 .checkbox:checked + .switch-btn:after {
   right: 4px;
 }
 
-#button-check .checkbox:checked ~ .layer, #button-check1 .checkbox:checked ~ .layer {
+#button-check .checkbox:checked ~ .layer, #button-check1 .checkbox:checked ~ .layer, #button-check2 .checkbox:checked ~ .layer, #button-check3 .checkbox:checked ~ .layer {
   background-color: #fdd1d1;
 }
