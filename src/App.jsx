@@ -159,9 +159,9 @@ const App = () => {
         <Route 
           path="/achievements"
           element={
-            // <ProtectedRoute>
+            <ProtectedRoute>
               <Achievements />
-            // </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route 
