@@ -1,38 +1,54 @@
 import AchievementCard from "../../components/AchievementCard/AchievementCard";
+import styles from './Achievements.module.css'
 
-const Achievements = () => {
+const Achievements = (props) => {
+    const { userProfile } = props
+
     const achievements = [
         {
             icon: "",
             name: "US Dollar",
-            category: "(category)",
-            total: 10
+            category: "Personal Finance",
+            threshold: 10
         },
         {
             icon: "",
             name: "European Euro",
-            category: "(category)",
-            total: 10
+            category: "Taxes",
+            threshold: 10
         },
         {
             icon: "",
             name: "Japanese Yen",
-            category: "Budgeting",
-            total: 10
+            category: "Investing",
+            threshold: 10
         },
         {
             icon: "",
             name: "British Pound",
-            category: "(category)",
-            total: 10
+            category: "Global Finance",
+            threshold: 10
         }
     ]
+
+    function sumAchievements(data) {
+        let currencies = 0
+        if (data.persFinance >= 10) { currencies += 1 }
+        if (data.buisEcon >= 10) { currencies += 1 }
+        if (data.investing >= 10) { currencies += 1 }
+        if (data.taxes >= 10) { currencies += 1 }
+        if (data.finHistory >= 10) { currencies += 1 }
+        if (data.insurance >= 10) { currencies += 1 }
+        if (data.stock >= 10) { currencies += 1 }
+        if (data.finInst >= 10) { currencies += 1 }
+        return currencies
+    }
 
     return (
         <>
             <h1>Achievements</h1>
-            <p>(number)/180</p>
-            {achievements.map((achievement, idx) => <AchievementCard icon={achievement.icon} name={achievement.name} category={achievement.category} total={achievement.total} key={idx} />)}
+            <p>{sumAchievements(userProfile)}/180</p>
+            {achievements.map((achievement, idx) => <AchievementCard icon={achievement.icon} name={achievement.name} category={achievement.category} threshold={achievement.threshold} key={idx} userProfile={userProfile} />)}
         </>
     );
 }
