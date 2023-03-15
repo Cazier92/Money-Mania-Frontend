@@ -43,28 +43,28 @@ const Profile = () => {
       {view === "stats" && 
       <div >
         <div className={styles.stats}>
-          <h3>Total Questions Seen</h3>
+          <h3 className={styles.profileh3}>Total Questions Seen</h3>
           <p>3</p>
         </div>
           <hr />
         <div className={styles.stats}>
-          <h3>Correct Answers</h3>
+          <h3 className={styles.profileh3}>Correct Answers</h3>
           <p>5</p>
         </div>
           <hr />
         <div className={styles.stats}>
-          <h3>Best Streak</h3>
+          <h3 className={styles.profileh3}>Best Streak</h3>
           <p>2</p>
         </div>
           <hr />
         <div className={styles.stats}>
-          <h3>Favorite Category</h3>
+          <h3 className={styles.profileh3}>Favorite Category</h3>
           <p>Economics</p>
           <p>12 correct answers </p>
         </div>
           <hr />
         <div className={styles.stats}>
-          <h3>Least Favorite Category</h3>
+          <h3 className={styles.profileh3}>Least Favorite Category</h3>
           <p>Stock Market</p>
           <p>0 correct answers</p>
         </div>
