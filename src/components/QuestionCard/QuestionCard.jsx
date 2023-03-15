@@ -1,11 +1,12 @@
-import AnswerCard from "../AnswerCard/AnswerCard";
-const QuestionCard = ({currentTrivia}) => {
-  return ( 
-    <>
-    <h1>This is QuestionCard Component</h1>
-    <AnswerCard currentTrivia={currentTrivia}/>
+import './QuestionCard.css'
 
-    </>
+const QuestionCard = ({currentTrivia}) => {
+
+
+  return ( 
+    <div className='question-card'>
+      <h1>{currentTrivia.q}</h1>
+    </div>
   );
 }
 

@@ -1,0 +1,19 @@
+.answer-card {
+  display: flex;
+  background-color: rgba(215, 210, 200, 1);
+  width: 95%;
+  min-height: 10vmin;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 2vmin;
+  cursor: pointer;
+}
+
+.answer-card > p {
+  padding: 0 5vmin;
+}
+
+.answer-card:hover {
+  background-color: rgba(115, 110, 100, .5);
+}

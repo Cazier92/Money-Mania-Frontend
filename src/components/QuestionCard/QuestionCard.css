@@ -1,0 +1,14 @@
+.question-card {
+  display: flex;
+  background-color: rgba(215, 210, 200, 1);
+  width: 95%;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 2vmin;
+}
+
+.question-card > h1 {
+  font-size: 6vmin;
+  padding: 0 5vmin;
+}
