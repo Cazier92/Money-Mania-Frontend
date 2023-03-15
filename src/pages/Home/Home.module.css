@@ -5,3 +5,6 @@
   text-decoration: none;
 }
 
+.home-btn-div {
+  display: flex;
+}
