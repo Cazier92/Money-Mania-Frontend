@@ -28,12 +28,12 @@ const AchievementCard = (props) => {
     }
 
     return (
-        <section>
+        <section className="achievement-card">
             <img src={icon} alt="icon" style={progPercentage === 100 ? fullColor : grayscale} />
             <div className="details">
                 <div className="score">
-                    <h3>{name}</h3>
-                    <h3>{progPercentage}%</h3>
+                    <h3 className="score-details">{name}</h3>
+                    <h3 className="score-details">{progPercentage}%</h3>
                 </div>
                 <p className="how-to-earn">Answer {threshold} questions correctly in <span className="bold">{category}</span></p>
                 <ProgressBar completed={progPercentage} />
