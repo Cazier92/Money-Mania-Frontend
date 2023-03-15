@@ -127,7 +127,7 @@ const App = () => {
         })
         setQNum(userProfile.insurance)
       }
-      if (currentCategory === 'Stock') {
+      if (currentCategory === 'Stock Markets') {
         setUpdateData({
           stock: (userProfile.stock) + 1
         })
@@ -142,6 +142,8 @@ const App = () => {
     }
     
   }, [userProfile, currentCategory])
+
+  console.log(currentCategory)
 
 
   const handleChangeCategory = (category) => {
