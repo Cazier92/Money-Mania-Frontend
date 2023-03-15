@@ -1,0 +1,110 @@
+.leaderboardContainer{
+/* border: solid red; */
+}
+
+.leaderListSection{
+
+background-color: white;  
+height: 100vh;
+}
+
+.leaderboardListContainer{
+
+  display: flex;
+  justify-content: space-between;
+  line-height: 60px;
+  padding: 16px 10px;
+  border-bottom: solid rgb(173, 173, 173);
+}
+
+.leaderboardTitle{
+  margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+}
+.leaderboardStage{
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  padding: 10px;
+}
+.stageImage{
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  }
+.stageText{
+  margin: 0 10px;
+}
+
+.nameText{
+  margin: 0 30vw 0 0;
+}
+
+.friendsBtn{
+background-color: white;
+margin: 0 10vw 0 10vw;
+padding: 20px 40px;
+border-radius: 50px;
+border: none;
+font-size: 20px;
+}
+
+.globalBtn{
+background-color: white;
+margin: 0 10vw 0 10vw;
+padding: 20px 40px;
+border-radius: 50px;
+border: none;
+font-size: 20px;
+}
+
+.btnDiv{
+  display: flex;
+  justify-content: space-around;
+  transform: translateY(20px);
+}
+
+.third{
+  /* border: solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  align-items: center;
+}
+
+.thirdStage{
+  border: solid rgb(220, 150, 80);
+  background-color:  rgb(226, 155, 84);;
+  padding: 20px 24% 0 24%;
+  text-align: center;
+}
+.first{
+  /* border: solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  align-items: center;
+}
+
+.firstStage{
+  border: solid rgb(255, 218, 117);
+  background-color: rgb(254, 221, 130);
+  padding: 60px 36% 0 36%;
+}
+.second{
+  /* border: solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  align-items: center;
+}
+.secondStage{
+  border: solid rgb(187, 187, 187);
+  background-color: rgb(182, 179, 179);
+  padding: 40px 20% 0 20%;
+}
