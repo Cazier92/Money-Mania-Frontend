@@ -5,19 +5,23 @@ import AnswerCard from "../../components/AnswerCard/AnswerCard";
 
 import './GamePage.css'
 
-const GamePage = ({currentTrivia}) => {
+const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpdated}) => {
   const [displayWin, setDisplayWin] = useState(false)
   const [correct, setCorrect] = useState(false)
-
+  const [id, setId] = useState('')
   const fillerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
   const handleClick = (resp) => {
     if (currentTrivia.ans === resp) {
       setCorrect(true)
       setDisplayWin(true)
+      setId('correct')
+      setUpdated(true)
+      handleUpdateProfile(updateData, user.profile)
     } else {
       setCorrect(false)
       setDisplayWin(true)
+      setId('incorrect')
     }
   }
 
@@ -36,17 +40,17 @@ const GamePage = ({currentTrivia}) => {
       </>) 
       : (<></>)}
     <QuestionCard currentTrivia={currentTrivia}/>
-    {currentTrivia.a ? (<AnswerCard ans={currentTrivia.a} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick}/>) : 
-      (<AnswerCard ans={fillerText} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} />)}
+    {currentTrivia.a ? (<AnswerCard ans={currentTrivia.a} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>) : 
+      (<AnswerCard ans={fillerText} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>)}
 
-    {currentTrivia.b ? (<AnswerCard ans={currentTrivia.b} currentTrivia={currentTrivia} resp={'b'} handleClick={handleClick}/>) : 
-      (<><AnswerCard ans={fillerText} currentTrivia={currentTrivia} resp={'b'} handleClick={handleClick}/></>)}
+    {currentTrivia.b ? (<AnswerCard ans={currentTrivia.b} currentTrivia={currentTrivia} resp={'b'} handleClick={handleClick} id={id}/>) : 
+      (<><AnswerCard ans={fillerText} currentTrivia={currentTrivia} resp={'b'} handleClick={handleClick} id={id}/></>)}
 
-    {currentTrivia.c ? (<AnswerCard ans={currentTrivia.c} currentTrivia={currentTrivia} resp={'c'} handleClick={handleClick}/>) : 
-      (<><AnswerCard ans={fillerText} currentTrivia={currentTrivia} resp={'c'} handleClick={handleClick}/></>)}
+    {currentTrivia.c ? (<AnswerCard ans={currentTrivia.c} currentTrivia={currentTrivia} resp={'c'} handleClick={handleClick} id={id}/>) : 
+      (<><AnswerCard ans={fillerText} currentTrivia={currentTrivia} resp={'c'} handleClick={handleClick} id={id}/></>)}
 
-    {currentTrivia.d ? (<AnswerCard ans={currentTrivia.d} currentTrivia={currentTrivia} resp={'d'} handleClick={handleClick}/>) : 
-      (<><AnswerCard ans={fillerText} currentTrivia={currentTrivia} resp={'d'} handleClick={handleClick}/></>)}
+    {currentTrivia.d ? (<AnswerCard ans={currentTrivia.d} currentTrivia={currentTrivia} resp={'d'} handleClick={handleClick} id={id}/>) : 
+      (<><AnswerCard ans={fillerText} currentTrivia={currentTrivia} resp={'d'} handleClick={handleClick} id={id}/></>)}
     </div>
   );
 }

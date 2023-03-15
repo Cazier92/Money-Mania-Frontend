@@ -30,10 +30,14 @@ import './App.css'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
-  const [userProfile, setUserProfile] = useState()
+  const [userProfile, setUserProfile] = useState(null)
   const [allTrivia, setAllTrivia] = useState([])
   const [currentCategory, setCurrentCategory] = useState(null)
   const [currentTrivia, setCurrentTrivia] = useState({})
+  const [changeTrivia, setChangeTrivia] = useState(false)
+  const [updateData, setUpdateData] = useState({})
+  const [updated, setUpdated] = useState(false)
+
 
 
   const navigate = useNavigate()
@@ -45,10 +49,11 @@ const App = () => {
       if(user) {
         const profileData = await profileService.show(user.profile)
         setUserProfile(profileData)
+        setUpdated(false)
       }
     }
     fetchProfile()
-  }, [user])
+  }, [user, updated])
 
   useEffect(() => {
     const fetchTrivia = async () => {
@@ -80,8 +85,53 @@ const App = () => {
         }
 
     }
-  }, [user, allTrivia, currentCategory])
+  }, [user, allTrivia, currentCategory, changeTrivia])
 
+  useEffect(() => {
+    if (userProfile){
+      if (currentCategory === 'Taxes') {
+        setUpdateData({
+          taxes: (userProfile.taxes) + 1
+        })
+      }
+      if (currentCategory === 'Personal Finance') {
+        setUpdateData({
+          persFinance: (userProfile.persFinance) + 1
+        })
+      }
+      if (currentCategory === 'Economics') {
+        setUpdateData({
+          buisEcon: (userProfile.buisEcon) + 1
+        })
+      }
+      if (currentCategory === 'Investing') {
+        setUpdateData({
+          investing: (userProfile.investing) + 1
+        })
+      }
+      if (currentCategory === 'Financial History') {
+        setUpdateData({
+          finHistory: (userProfile.finHistory) + 1
+        })
+      }
+      if (currentCategory === 'Insurance') {
+        setUpdateData({
+          insurance: (userProfile.insurance) + 1
+        })
+      }
+      if (currentCategory === 'Stock') {
+        setUpdateData({
+          stock: (userProfile.stock) + 1
+        })
+      }
+      if (currentCategory === 'Financial Institution') {
+        setUpdateData({
+          finInst: (userProfile.finInst) + 1
+        })
+      }
+    }
+    
+  }, [userProfile, currentCategory])
 
 
   const handleChangeCategory = (category) => {
@@ -100,8 +150,14 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  const handleChangeTrivia = () => {
+    setChangeTrivia(!changeTrivia)
+  }
 
-
+  const handleUpdateProfile = async (data, id) => {
+    console.log(data)
+    await profileService.update(data, id)
+  }
 
   return (
     <>
@@ -137,9 +193,9 @@ const App = () => {
         <Route 
           path="/home"
           element={
-            // <ProtectedRoute user={user}>
-              <Home currentCategory={currentCategory}/>
-            /* </ProtectedRoute> */
+            <ProtectedRoute user={user}>
+              <Home currentCategory={currentCategory} handleChangeTrivia={handleChangeTrivia} user={user}/>
+            </ProtectedRoute>
           }
         />
         <Route 
@@ -154,23 +210,23 @@ const App = () => {
           path="/gamepage"
           element={
             <ProtectedRoute user={user}>
-              <GamePage currentTrivia={currentTrivia}/>
+              <GamePage currentTrivia={currentTrivia} handleUpdateProfile={handleUpdateProfile} setProfileData={setUpdateData} updateData={updateData} currentCategory={currentCategory} userProfile={userProfile} user={user} setUpdated={setUpdated}/>
             </ProtectedRoute>
           }
         />
         <Route 
           path="/profile"
           element={
-            // <ProtectedRoute user={user}>
+            <ProtectedRoute user={user}>
               <Profile userProfile={userProfile}/>
-            // </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route 
           path="leaderboard"
           element={
-            <ProtectedRoute user={user}>
-              <Leaderboard />
+            <ProtectedRoute user={user} >
+              <Leaderboard userProfile={userProfile}/>
             </ProtectedRoute>
           }
         />
@@ -178,14 +234,14 @@ const App = () => {
           path="/achievements"
           element={
             <ProtectedRoute user={user}>
-              <Achievements />
+              <Achievements userProfile={userProfile}/>
             </ProtectedRoute>
           }
         />
         <Route 
           path="/settings"
           element={
-              <Settings />
+              <Settings handleLogout={handleLogout}/>
           }
         />
       </Routes>

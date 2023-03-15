@@ -17,3 +17,11 @@
 .answer-card:hover {
   background-color: rgba(115, 110, 100, .5);
 }
+
+#correct {
+  background-color: green;
+}
+
+#incorrect {
+  background-color: red;
+}

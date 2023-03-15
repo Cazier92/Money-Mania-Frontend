@@ -41,30 +41,32 @@ const Profile = () => {
       <FriendCard/>
       }
       {view === "stats" && 
-      <div>
-        <div>
+      <div >
+        <div className={styles.stats}>
           <h3>Total Questions Seen</h3>
           <p>3</p>
-          <hr />
         </div>
-        <div>
+          <hr />
+        <div className={styles.stats}>
           <h3>Correct Answers</h3>
           <p>5</p>
-          <hr />
         </div>
-        <div>
+          <hr />
+        <div className={styles.stats}>
           <h3>Best Streak</h3>
           <p>2</p>
-          <hr />
         </div>
-        <div>
+          <hr />
+        <div className={styles.stats}>
           <h3>Favorite Category</h3>
           <p>Economics</p>
-          <hr />
+          <p>12 correct answers </p>
         </div>
-        <div>
+          <hr />
+        <div className={styles.stats}>
           <h3>Least Favorite Category</h3>
           <p>Stock Market</p>
+          <p>0 correct answers</p>
         </div>
       </div>
         
