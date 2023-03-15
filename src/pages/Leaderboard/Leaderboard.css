@@ -1,6 +1,19 @@
 .leaderboardContainer{
 /* border: solid red; */
 }
+
+.leaderListSection{
+border: solid red;
+width: 100%;
+min-height: 45vh;
+background-color: white;
+}
+
+.leaderboardListContainer{
+  border: solid blue;
+  display: flex;
+  flex-direction: row;
+}
 .leaderboardTitle{
   margin-top: 3vh;
   display: flex;

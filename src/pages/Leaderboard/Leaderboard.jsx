@@ -6,21 +6,35 @@ const Leaderboard = () => {
 
   const [global, setGlobal] = useState(false);
 
-  const globalFunctionClick = () =>{
-    setGlobal(current => !current)
+  const friendsFunctionClick = () =>{
+    if (global === true){
+      setGlobal(false)
+    }
+    if (global === false){
+      return
+    }
   }
   
-  const friendsFunctionClick = () =>{
-    setGlobal(current => !current)
+  
+  const globalFunctionClick = () =>{
+    if (global === true){
+      return
+    }
+    if (global === false){
+      setGlobal(true)
+    }
   }
 
   const globalFunction = () =>{
     return <div className="leaderboardListContainer">
+      <img className="stageImage" src="https://imgur.com/OYCmlJW.jpg" alt="image" />
+      <h3>global yeah</h3>
     </div>
   }
   
   const friendsFunction = () =>{
     return <div className="leaderboardListContainer">
+      <img className="stageImage" src="https://imgur.com/OYCmlJW.jpg" alt="image" />
       <h3>friends yeah</h3>
     </div>
   }
@@ -51,7 +65,7 @@ const Leaderboard = () => {
     <button className="friendsBtn" onClick={friendsFunctionClick}>Friends</button>
     <button className="globalBtn" onClick={globalFunctionClick}>Global</button>
     <div>
-    <section> {global?globalFunction():friendsFunction()}</section>
+    <section className="leaderListSection"> {global?globalFunction():friendsFunction()}</section>
     </div>
 
     </div>
