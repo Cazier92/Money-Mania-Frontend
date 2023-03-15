@@ -3,6 +3,11 @@ import './Home.module.css'
 import Banner from "../../components/Banner/Banner";
 import PiggyBank from "../../components/PiggyBank/PiggyBank";
 
+const linkStyle = {
+    textDecoration: "none",
+    color: "black",
+  };
+
 const Home = ({currentCategory, handleChangeTrivia, user, userProfile}) => {
     return (
         <>
@@ -11,10 +16,10 @@ const Home = ({currentCategory, handleChangeTrivia, user, userProfile}) => {
             {currentCategory ? 
             (<>
                 <h2>Category: {currentCategory}</h2>
-                <button onClick={handleChangeTrivia}><Link to='/gamepage'>Continue Trivia</Link></button>
-                <button><Link to='/categories'>Change Category</Link></button>
+                <button onClick={handleChangeTrivia} className='homeButton'><Link to='/gamepage' style={linkStyle}>Continue Trivia</Link></button>
+                <button className='homeButton'><Link to='/categories' style={linkStyle}>Change Category</Link></button>
             </>) : (<>
-                <button><Link to='/categories'>Choose Category</Link></button>
+                <button className='homeButton'><Link to='/categories' style={linkStyle}>Choose Category</Link></button>
             </>)}
         </>
     );

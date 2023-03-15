@@ -50,7 +50,7 @@ const Achievements = (props) => {
 
     return (
         <>
-            <h2>Achievements</h2>
+            <h2 className="achievements-header">Achievements</h2>
             <p className="achievement-total bold">{sumAchievements(userProfile)}/180</p>
             <div className="achievements">
                 {achievements.map((achievement, idx) => (

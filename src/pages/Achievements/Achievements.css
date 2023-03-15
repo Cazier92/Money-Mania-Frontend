@@ -1,23 +1,24 @@
-h2 {
+.achievements-header {
     text-align: center;
-}
-
-h3, p {
-    margin: 0;
 }
 
 .achievement-total {
+    margin: 0;
     text-align: center;
 }
 
-section {
+.achievement-card {
     display: flex;
     width: 90%;
 }
 
-section img {
+.achievement-card img {
     margin-right: 6px;
     margin-left: -14px;
+}
+
+.score-details {
+    margin: 0;
 }
 
 .details {
