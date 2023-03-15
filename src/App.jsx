@@ -137,9 +137,9 @@ const App = () => {
         <Route 
           path="/home"
           element={
-            <ProtectedRoute user={user}>
+            // <ProtectedRoute user={user}>
               <Home currentCategory={currentCategory}/>
-            </ProtectedRoute>
+            /* </ProtectedRoute> */
           }
         />
         <Route 

@@ -1,7 +1,12 @@
+import styles from './Banner.module.css'
 const Banner = (props) => {
     return (
         <main>
-            <h2>Money Mania</h2>
+            <div className={styles.circle}>
+            </div>
+                <h2>Money Mania</h2>
+                <p className={styles.firstp}>Welcome back, </p>
+                <p className={styles.secondp}>[Temp Name]{props.user}</p>
         </main>
     )
 }
