@@ -5,12 +5,10 @@ import AnswerCard from "../../components/AnswerCard/AnswerCard";
 
 import './GamePage.css'
 
-const GamePage = ({currentTrivia}) => {
+const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpdated}) => {
   const [displayWin, setDisplayWin] = useState(false)
   const [correct, setCorrect] = useState(false)
   const [id, setId] = useState('')
-
-
   const fillerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
   const handleClick = (resp) => {
@@ -18,6 +16,8 @@ const GamePage = ({currentTrivia}) => {
       setCorrect(true)
       setDisplayWin(true)
       setId('correct')
+      setUpdated(true)
+      handleUpdateProfile(updateData, user.profile)
     } else {
       setCorrect(false)
       setDisplayWin(true)
