@@ -1,6 +1,7 @@
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import styles from './Categories.module.css'
 
+
 const Categories = ({handleChangeCategory}) => {
   return ( 
     <main>

@@ -1,13 +1,15 @@
 .category{
-  border: 1px solid black;
+  border: 1px;
   border-radius: 25px; 
   margin: 20px;
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 125px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: white;
 }
 .categoryList{
   display: flex;
