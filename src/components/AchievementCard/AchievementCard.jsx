@@ -26,9 +26,7 @@ const AchievementCard = (props) => {
                     <h3>{calculatePercentage(category, threshold, userProfile)}%</h3>
                 </div>
                 <p className="how-to-earn">Answer {threshold} questions correctly in <span className="bold">{category}</span></p>
-                <div className="progress">
-                    <ProgressBar completed={calculatePercentage(category, threshold, userProfile)} />
-                </div>
+                <ProgressBar completed={calculatePercentage(category, threshold, userProfile)} />
             </div>
         </section>
     )
