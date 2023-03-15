@@ -38,6 +38,8 @@ const App = () => {
 
   const navigate = useNavigate()
 
+  console.log(userProfile)
+
   useEffect(() => {
     const fetchProfile = async () => {
       if(user) {
@@ -119,7 +121,7 @@ const App = () => {
         <Route 
           path="/home"
           element={
-            // <ProtectedRoute>
+            // <ProtectedRoute user={user}>
               <Home currentCategory={currentCategory}/>
             // </ProtectedRoute>
           }
@@ -127,15 +129,15 @@ const App = () => {
         <Route 
           path="/categories"
           element={
-            // <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Categories setCurrentCategory={setCurrentCategory}/>
-            // </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route 
           path="/gamepage"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <GamePage currentTrivia={currentTrivia}/>
             </ProtectedRoute>
           }
@@ -143,7 +145,7 @@ const App = () => {
         <Route 
           path="/profile"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Profile userProfile={userProfile}/>
             </ProtectedRoute>
           }
@@ -151,7 +153,7 @@ const App = () => {
         <Route 
           path="leaderboard"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Leaderboard />
             </ProtectedRoute>
           }
@@ -159,7 +161,7 @@ const App = () => {
         <Route 
           path="/achievements"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Achievements />
             </ProtectedRoute>
           }
