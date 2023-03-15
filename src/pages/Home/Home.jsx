@@ -15,12 +15,15 @@ const Home = ({currentCategory, handleChangeTrivia, user, userProfile}) => {
             <PiggyBank />
             {currentCategory ? 
             (<>
+            
                 <h2>Category: {currentCategory}</h2>
-                <button onClick={handleChangeTrivia} className='homeButton'><Link to='/gamepage' style={linkStyle}>Continue Trivia</Link></button>
-                <button className='homeButton'><Link to='/categories' style={linkStyle}>Change Category</Link></button>
-            </>) : (<>
+                <div className="home-btn-div">
+                    <button onClick={handleChangeTrivia} className='homeButton'><Link to='/gamepage' style={linkStyle}>Continue Trivia</Link></button>
+                    <button className='homeButton'><Link to='/categories' style={linkStyle}>Change Category</Link></button>
+                </div>
+            </>) : (<div className="home-btn-div">
                 <button className='homeButton'><Link to='/categories' style={linkStyle}>Choose Category</Link></button>
-            </>)}
+            </div>)}
         </>
     );
 }
