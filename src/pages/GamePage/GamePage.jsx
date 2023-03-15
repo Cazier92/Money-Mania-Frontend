@@ -1,10 +1,10 @@
 import QuestionCard from "../../components/QuestionCard/QuestionCard";
 
-const GamePage = () => {
+const GamePage = ({currentTrivia}) => {
   return ( 
     <>
     <h1>this is gamePage page</h1>
-    <QuestionCard/>
+    <QuestionCard currentTrivia={currentTrivia}/>
     </>
   );
 }

@@ -1,9 +1,9 @@
 import AnswerCard from "../AnswerCard/AnswerCard";
-const QuestionCard = () => {
+const QuestionCard = ({currentTrivia}) => {
   return ( 
     <>
     <h1>This is QuestionCard Component</h1>
-    <AnswerCard/>
+    <AnswerCard currentTrivia={currentTrivia}/>
 
     </>
   );
