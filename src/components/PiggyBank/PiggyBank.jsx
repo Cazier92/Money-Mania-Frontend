@@ -1,8 +1,10 @@
+import styles from './PiggyBank.module.css'
 const PiggyBank = (props) => {
     return (
-        <>
-            <h1>🐖</h1>
-        </>
+        <div>
+            <img className={styles.coin} src="../coin.png" alt="" srcset="" />
+            <img className={styles.pig} src="../pig.png" alt="" />
+        </div>
     )
 }
 

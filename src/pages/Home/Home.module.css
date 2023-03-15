@@ -1,0 +1,16 @@
+button{
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+a::after{
+  text-decoration: none;
+}

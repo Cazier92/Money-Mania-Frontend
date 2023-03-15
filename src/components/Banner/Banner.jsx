@@ -6,7 +6,7 @@ const Banner = (props) => {
             </div>
                 <h2>Money Mania</h2>
                 <p className={styles.firstp}>Welcome back, </p>
-                <p className={styles.secondp}>[Temp Name]{props.user}</p>
+                <p className={styles.secondp}>{props.user}</p>
         </main>
     )
 }
