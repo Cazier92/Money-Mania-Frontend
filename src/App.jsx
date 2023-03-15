@@ -174,15 +174,15 @@ const App = () => {
         <Route 
           path="leaderboard"
           element={
-            <ProtectedRoute user={user}>
-              <Leaderboard />
+            <ProtectedRoute user={user} >
+              <Leaderboard userProfile={userProfile}/>
             </ProtectedRoute>
           }
         />
         <Route 
           path="/achievements"
           element={
-            <ProtectedRoute user={user}>
+            <ProtectedRoute user={user} userProfile={userProfile}>
               <Achievements />
             </ProtectedRoute>
           }
@@ -190,7 +190,7 @@ const App = () => {
         <Route 
           path="/settings"
           element={
-              <Settings />
+              <Settings handleLogout={handleLogout}/>
           }
         />
       </Routes>
