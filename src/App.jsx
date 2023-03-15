@@ -32,7 +32,7 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const [userProfile, setUserProfile] = useState()
   const [allTrivia, setAllTrivia] = useState([])
-  const [currentCategory, setCurrentCategory] = useState('')
+  const [currentCategory, setCurrentCategory] = useState(null)
   const [currentTrivia, setCurrentTrivia] = useState({})
 
 
@@ -61,7 +61,7 @@ const App = () => {
   }, [user])
 
   useEffect(() => {
-    if (currentCategory !== '' && allTrivia) {
+    if (currentCategory && allTrivia) {
       let catTrivia = []
       let c = currentCategory.toLowerCase()
       if (c === 'economics') {
@@ -137,9 +137,9 @@ const App = () => {
         <Route 
           path="/home"
           element={
-            // <ProtectedRoute user={user}>
+            <ProtectedRoute user={user}>
               <Home currentCategory={currentCategory}/>
-            // </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route 
