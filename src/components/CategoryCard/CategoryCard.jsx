@@ -5,12 +5,13 @@ const CategoryCard = ({setCurrentCategory}) => {
 
   const handleClick = (category) => {
     setCurrentCategory(category)
+    console.log(category)
   }
 
   return ( 
     <main className={styles.categoryList}>
     {categories.map((category) => 
-      <p className={styles.category} onClick={handleClick(category)}>{category}</p>
+      <p className={styles.category} onClick={() => handleClick(category)}>{category}</p>
     )}
     </main>
   );

@@ -87,7 +87,7 @@ const App = () => {
 
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user} />
       <Routes>
         <Route path="/" 
           element={<Landing user={user} />} 
@@ -120,16 +120,16 @@ const App = () => {
           path="/home"
           element={
             // <ProtectedRoute>
-              <Home />
+              <Home currentCategory={currentCategory}/>
             // </ProtectedRoute>
           }
         />
         <Route 
           path="/categories"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Categories setCurrentCategory={setCurrentCategory}/>
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route 
