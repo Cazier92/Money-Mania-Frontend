@@ -194,7 +194,7 @@ const App = () => {
           path="/home"
           element={
             <ProtectedRoute user={user}>
-              <Home currentCategory={currentCategory} handleChangeTrivia={handleChangeTrivia}/>
+              <Home currentCategory={currentCategory} handleChangeTrivia={handleChangeTrivia} user={user}/>
             </ProtectedRoute>
           }
         />
