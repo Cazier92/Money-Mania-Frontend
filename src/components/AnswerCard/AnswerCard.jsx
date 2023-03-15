@@ -1,11 +1,10 @@
 import './AnswerCard.css'
 
-const AnswerCard = ({ans, currentTrivia, resp, handleClick}) => {
+const AnswerCard = ({ans, currentTrivia, resp, handleClick, id}) => {
 
-  console.log(resp)
-  
+
   return ( 
-  <div className="answer-card" onClick={() => handleClick(resp)}>
+  <div className="answer-card" id={id} onClick={() => handleClick(resp)}>
     <p>{ans}</p>
   </div> );
 }

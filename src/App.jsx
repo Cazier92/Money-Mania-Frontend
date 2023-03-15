@@ -34,6 +34,7 @@ const App = () => {
   const [allTrivia, setAllTrivia] = useState([])
   const [currentCategory, setCurrentCategory] = useState(null)
   const [currentTrivia, setCurrentTrivia] = useState({})
+  const [changeTrivia, setChangeTrivia] = useState(false)
 
 
   const navigate = useNavigate()
@@ -80,7 +81,7 @@ const App = () => {
         }
 
     }
-  }, [user, allTrivia, currentCategory])
+  }, [user, allTrivia, currentCategory, changeTrivia])
 
 
 
@@ -98,6 +99,10 @@ const App = () => {
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
+  }
+
+  const handleChangeTrivia = () => {
+    setChangeTrivia(!changeTrivia)
   }
 
 
@@ -138,7 +143,7 @@ const App = () => {
           path="/home"
           element={
             <ProtectedRoute user={user}>
-              <Home currentCategory={currentCategory}/>
+              <Home currentCategory={currentCategory} handleChangeTrivia={handleChangeTrivia}/>
             </ProtectedRoute>
           }
         />
@@ -169,15 +174,15 @@ const App = () => {
         <Route 
           path="leaderboard"
           element={
-            <ProtectedRoute user={user}>
-              <Leaderboard />
+            <ProtectedRoute user={user} >
+              <Leaderboard userProfile={userProfile}/>
             </ProtectedRoute>
           }
         />
         <Route 
           path="/achievements"
           element={
-            <ProtectedRoute user={user}>
+            <ProtectedRoute user={user} userProfile={userProfile}>
               <Achievements />
             </ProtectedRoute>
           }
@@ -185,7 +190,7 @@ const App = () => {
         <Route 
           path="/settings"
           element={
-              <Settings />
+              <Settings handleLogout={handleLogout}/>
           }
         />
       </Routes>
