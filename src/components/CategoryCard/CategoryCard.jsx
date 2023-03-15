@@ -3,13 +3,32 @@
 import styles from './CategoryCard.module.css'
 
 const CategoryCard = ({handleChangeCategory}) => {
-  const categories = ["Taxes", "Insurance", "Economics", "Stock Markets", "Global Finance", "Personal Finance" ]
+  const categories = [
+    {name: "Personal Finance", 
+    img: "../personal.svg"}, 
+    {name: "Taxes", 
+    img: "../taxes.svg"}, 
+    {name: "Financial Institutions", 
+    img: "../financial.svg"},  
+    {name: "Economics", 
+    img: "../economics.svg"}, 
+    {name: "Insurance", 
+    img: "../insurance.svg"}, 
+    {name: "Global Finance", 
+    img: "../global.svg"},  
+    {name: "Stock Markets", 
+    img: "../stock.svg"}, 
+    {name: "Financial History", 
+    img: "../history.svg"},  ]
 
 
   return ( 
     <main className={styles.categoryList}>
-    {categories.map((category) => 
-      <p className={styles.category} onClick={() => handleChangeCategory(category)}>{category}</p>
+    {categories.map((category, idx) => 
+    <>
+      <p className={styles.category} onClick={() => handleChangeCategory(category)}> <img className={styles.icon} src={category.img} alt="" />{category.name}</p>
+      {console.log(category.img)}
+    </>
     )}
     </main>
   );
