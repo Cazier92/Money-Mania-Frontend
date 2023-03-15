@@ -34,6 +34,7 @@ const App = () => {
   const [allTrivia, setAllTrivia] = useState([])
   const [currentCategory, setCurrentCategory] = useState(null)
   const [currentTrivia, setCurrentTrivia] = useState({})
+  const [changeTrivia, setChangeTrivia] = useState(false)
 
 
   const navigate = useNavigate()
@@ -80,7 +81,7 @@ const App = () => {
         }
 
     }
-  }, [user, allTrivia, currentCategory])
+  }, [user, allTrivia, currentCategory, changeTrivia])
 
 
 
@@ -98,6 +99,10 @@ const App = () => {
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
+  }
+
+  const handleChangeTrivia = () => {
+    setChangeTrivia(!changeTrivia)
   }
 
 
@@ -138,7 +143,7 @@ const App = () => {
           path="/home"
           element={
             <ProtectedRoute user={user}>
-              <Home currentCategory={currentCategory}/>
+              <Home currentCategory={currentCategory} handleChangeTrivia={handleChangeTrivia}/>
             </ProtectedRoute>
           }
         />
