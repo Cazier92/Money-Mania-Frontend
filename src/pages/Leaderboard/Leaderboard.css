@@ -3,16 +3,18 @@
 }
 
 .leaderListSection{
-border: solid red;
+
 background-color: white;  
+height: 100vh;
 }
 
 .leaderboardListContainer{
-  border: solid blue;
+
   display: flex;
   justify-content: space-between;
   line-height: 60px;
-  padding: 10px 10px;
+  padding: 16px 10px;
+  border-bottom: solid rgb(173, 173, 173);
 }
 
 .leaderboardTitle{
@@ -24,6 +26,7 @@ background-color: white;
   display: flex;
   justify-content: center;
   margin-top: 3vh;
+  margin-bottom: 3vh;
   padding: 10px;
 }
 .stageImage{
@@ -37,6 +40,30 @@ background-color: white;
 
 .nameText{
   margin: 0 30vw 0 0;
+}
+
+.friendsBtn{
+background-color: white;
+margin: 0 10vw 0 10vw;
+padding: 20px 40px;
+border-radius: 50px;
+border: none;
+font-size: 20px;
+}
+
+.globalBtn{
+background-color: white;
+margin: 0 10vw 0 10vw;
+padding: 20px 40px;
+border-radius: 50px;
+border: none;
+font-size: 20px;
+}
+
+.btnDiv{
+  display: flex;
+  justify-content: space-around;
+  transform: translateY(20px);
 }
 
 .third{

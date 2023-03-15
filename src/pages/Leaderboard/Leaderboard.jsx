@@ -32,6 +32,11 @@ const Leaderboard = () => {
       <p className="nameText">global name</p>
       <p className="orderText"> 4th</p>
     </div>
+    <div className="leaderboardListContainer">
+      <img className="stageImage" src="https://imgur.com/OYCmlJW.jpg" alt="image" />
+      <p className="nameText">another global name</p>
+      <p className="orderText"> 6th</p>
+    </div>
     </>
   }
   
@@ -41,6 +46,11 @@ const Leaderboard = () => {
       <img className="stageImage" src="https://imgur.com/OYCmlJW.jpg" alt="image" />
       <p className="nameText">friends name</p>
       <p className="orderText"> 4th</p>
+    </div>
+    <div className="leaderboardListContainer">
+      <img className="stageImage" src="https://imgur.com/OYCmlJW.jpg" alt="image" />
+      <p className="nameText">best friends name</p>
+      <p className="orderText"> 7th</p>
     </div>
     </>
   }
@@ -68,8 +78,10 @@ const Leaderboard = () => {
           <div className="secondStage">2nd</div>
         </div>
     </div>
-    <button className="friendsBtn" onClick={friendsFunctionClick}>Friends</button>
-    <button className="globalBtn" onClick={globalFunctionClick}>Global</button>
+    <div className="btnDiv">
+      <button className="friendsBtn" onClick={friendsFunctionClick}>Friends</button>
+      <button className="globalBtn" onClick={globalFunctionClick}>Global</button>
+    </div>
     <div>
     <div className="leaderListSection"> {global?globalFunction():friendsFunction()}</div>
     </div>
