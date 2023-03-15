@@ -1,5 +1,6 @@
 import AchievementCard from "../../components/AchievementCard/AchievementCard";
 import './Achievements.css'
+// import 'yen.svg' from '../../achievements'
 
 const Achievements = (props) => {
     const { userProfile } = props
