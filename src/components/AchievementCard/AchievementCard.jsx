@@ -1,3 +1,5 @@
+import ProgressBar from "../ProgressBar/ProgressBar"
+
 const AchievementCard = (props) => {
     const { icon, name, category, threshold, userProfile } = props
 
@@ -24,7 +26,9 @@ const AchievementCard = (props) => {
                     <h3>{calculatePercentage(category, threshold, userProfile)}%</h3>
                 </div>
                 <p className="how-to-earn">Answer {threshold} questions correctly in <span className="bold">{category}</span></p>
-                <p>[ - progress bar - ]</p>
+                <div className="progress">
+                    <ProgressBar completed={calculatePercentage(category, threshold, userProfile)} />
+                </div>
             </div>
         </section>
     )
