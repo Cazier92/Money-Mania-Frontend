@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import QuestionCard from "../../components/QuestionCard/QuestionCard";
 import AnswerCard from "../../components/AnswerCard/AnswerCard";
+import ClaimReward from "../../components/ClaimReward/ClaimReward";
 
 import './GamePage.css'
 
@@ -9,6 +10,7 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
   const [displayWin, setDisplayWin] = useState(false)
   const [correct, setCorrect] = useState(false)
   const [id, setId] = useState('')
+  const [crack, setCrack] = useState(false)
   const fillerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   let answer
   let q = qNum % 10
@@ -30,17 +32,19 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
       setId('correct')
       setUpdated(true)
       handleUpdateProfile(updateData, user.profile)
+      setRewardClaimed(false)
     } else {
       setCorrect(false)
       setDisplayWin(true)
       setId('incorrect')
+      setRewardClaimed(false)
     }
   }
 
   
   return ( 
     <>
-    {q === 0 && !rewardClaimed ? (<>
+    {q === 0 && !rewardClaimed && !crack ? (<>
       <div className="correct-ans-div">
         <h1>Good Job!</h1>
         <div>
@@ -48,9 +52,13 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
           <h5>Correct!</h5>
           <AnswerCard ans={answer} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>
         </div>
-        <button className="claim-reward-btn">Claim Reward!</button>
+        <button className="claim-reward-btn" onClick={() => setCrack(true)}>Claim Reward!</button>
       </div>
-    </>) : (<>
+    </>) 
+    : q === 0 && !rewardClaimed && crack ? (<>
+      <ClaimReward setRewardClaimed={setRewardClaimed}/>
+    </>)
+    : (<>
       <div className="game-page-main">
         {displayWin ? 
         (<>
