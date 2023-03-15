@@ -1,16 +1,16 @@
 .leaderboardContainer{
-border: solid red;
+/* border: solid red; */
 }
 .leaderboardTitle{
+  margin-top: 3vh;
   display: flex;
   justify-content: center;
 }
 .leaderboardStage{
-  border: solid blue;
   display: flex;
   justify-content: center;
-  margin-top: 6vh;
-  padding: 20px;
+  margin-top: 3vh;
+  padding: 10px;
 }
 .stageImage{
   height: 60px;
