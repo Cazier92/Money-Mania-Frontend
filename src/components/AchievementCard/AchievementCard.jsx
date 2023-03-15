@@ -17,11 +17,15 @@ const AchievementCard = (props) => {
 
     return (
         <section>
-            <img src={icon} alt={name} />
-            <h3>{name}</h3>
-            <p>Answer {threshold} questions correctly in {category}</p>
-            <p>{calculatePercentage(category, threshold, userProfile)}%</p>
-            <p>[ - progress bar - ]</p>
+            <img src={icon} alt="icon" />
+            <div className="details">
+                <div className="score">
+                    <h3>{name}</h3>
+                    <h3>{calculatePercentage(category, threshold, userProfile)}%</h3>
+                </div>
+                <p className="how-to-earn">Answer {threshold} questions correctly in <span className="bold">{category}</span></p>
+                <p>[ - progress bar - ]</p>
+            </div>
         </section>
     )
 }

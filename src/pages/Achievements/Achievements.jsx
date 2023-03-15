@@ -46,9 +46,16 @@ const Achievements = (props) => {
 
     return (
         <>
-            <h1>Achievements</h1>
-            <p className="achievement-total">{sumAchievements(userProfile)}/180</p>
-            {achievements.map((achievement, idx) => <AchievementCard icon={achievement.icon} name={achievement.name} category={achievement.category} threshold={achievement.threshold} key={idx} userProfile={userProfile} />)}
+            <h2>Achievements</h2>
+            <p className="achievement-total bold">{sumAchievements(userProfile)}/180</p>
+            <div className="achievements">
+                {achievements.map((achievement, idx) => (
+                    <div className="card-container" key={idx}>
+                        <AchievementCard icon={achievement.icon} name={achievement.name} category={achievement.category} threshold={achievement.threshold} userProfile={userProfile} />
+                        <hr />
+                    </div>
+                ))}
+            </div>
         </>
     );
 }
