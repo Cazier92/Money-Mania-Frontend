@@ -1,7 +1,13 @@
-const AnswerCard = ({currentTrivia}) => {
-  return ( <>
-  <h1>this is AnswerCard component </h1>
-  </> );
+import './AnswerCard.css'
+
+const AnswerCard = ({ans, currentTrivia, resp, handleClick}) => {
+
+  console.log(resp)
+  
+  return ( 
+  <div className="answer-card" onClick={() => handleClick(resp)}>
+    <p>{ans}</p>
+  </div> );
 }
 
 export default AnswerCard;
