@@ -13,7 +13,7 @@ height: 100vh;
   display: flex;
   justify-content: space-between;
   line-height: 60px;
-  padding: 16px 10px;
+  padding: 16px 20px;
   border-bottom: solid rgb(173, 173, 173);
 }
 
