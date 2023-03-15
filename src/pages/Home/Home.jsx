@@ -8,9 +8,14 @@ const Home = ({currentCategory}) => {
         <>
             <Banner />
             <PiggyBank />
-            <h2>Category: {currentCategory}</h2>
-            <button><Link to='/gamepage'>Continue Trivia</Link></button>
-            <button><Link to='/categories'>Change Category</Link></button>
+            {currentCategory ? 
+            (<>
+                <h2>Category: {currentCategory}</h2>
+                <button><Link to='/gamepage'>Continue Trivia</Link></button>
+                <button><Link to='/categories'>Change Category</Link></button>
+            </>) : (<>
+                <button><Link to='/categories'>Choose Category</Link></button>
+            </>)}
         </>
     );
 }
