@@ -38,6 +38,8 @@ const App = () => {
 
   const navigate = useNavigate()
 
+
+
   useEffect(() => {
     const fetchProfile = async () => {
       if(user) {
@@ -61,15 +63,31 @@ const App = () => {
   useEffect(() => {
     if (currentCategory !== '' && allTrivia) {
       let catTrivia = []
-      allTrivia.forEach(q => {
-        if (q.category === currentCategory) {
-          catTrivia.push(q)
+      let c = currentCategory.toLowerCase()
+      if (c === 'economics') {
+        c = 'business and economics'
+      }
+        allTrivia.forEach(q => {
+
+          if (q.category === c) {
+            catTrivia.push(q)
+            
+          }
+        })
+        if (catTrivia.length) {
+          let i = Math.floor(Math.random() * catTrivia.length)
+          setCurrentTrivia(catTrivia[i])
         }
-      })
-      let i = Math.floor(Math.random() * catTrivia.length)
-      setCurrentTrivia(catTrivia[i])
+
     }
   }, [user, allTrivia, currentCategory])
+
+
+
+  const handleChangeCategory = (category) => {
+    setCurrentCategory(category)
+    navigate('/home')
+  }
 
 
   const handleLogout = () => {
@@ -87,7 +105,7 @@ const App = () => {
 
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user} />
       <Routes>
         <Route path="/" 
           element={<Landing user={user} />} 
@@ -119,23 +137,23 @@ const App = () => {
         <Route 
           path="/home"
           element={
-            // <ProtectedRoute>
-              <Home />
+            // <ProtectedRoute user={user}>
+              <Home currentCategory={currentCategory}/>
             // </ProtectedRoute>
           }
         />
         <Route 
           path="/categories"
           element={
-            <ProtectedRoute>
-              <Categories setCurrentCategory={setCurrentCategory}/>
+            <ProtectedRoute user={user}>
+              <Categories handleChangeCategory={handleChangeCategory}/>
             </ProtectedRoute>
           }
         />
         <Route 
           path="/gamepage"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <GamePage currentTrivia={currentTrivia}/>
             </ProtectedRoute>
           }
@@ -143,7 +161,7 @@ const App = () => {
         <Route 
           path="/profile"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Profile userProfile={userProfile}/>
             </ProtectedRoute>
           }
@@ -151,7 +169,7 @@ const App = () => {
         <Route 
           path="leaderboard"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Leaderboard />
             </ProtectedRoute>
           }
@@ -159,7 +177,7 @@ const App = () => {
         <Route 
           path="/achievements"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Achievements />
             </ProtectedRoute>
           }
