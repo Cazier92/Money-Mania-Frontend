@@ -161,9 +161,9 @@ const App = () => {
         <Route 
           path="/profile"
           element={
-            <ProtectedRoute user={user}>
+            // <ProtectedRoute user={user}>
               <Profile userProfile={userProfile}/>
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route 
