@@ -4,16 +4,17 @@
 
 .leaderListSection{
 border: solid red;
-width: 100%;
-min-height: 45vh;
-background-color: white;
+background-color: white;  
 }
 
 .leaderboardListContainer{
   border: solid blue;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  line-height: 60px;
+  padding: 10px 10px;
 }
+
 .leaderboardTitle{
   margin-top: 3vh;
   display: flex;
@@ -32,6 +33,10 @@ background-color: white;
   }
 .stageText{
   margin: 0 10px;
+}
+
+.nameText{
+  margin: 0 30vw 0 0;
 }
 
 .third{
