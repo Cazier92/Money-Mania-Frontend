@@ -1,33 +1,62 @@
 .leaderboardContainer{
-
+border: solid red;
+}
+.leaderboardTitle{
+  display: flex;
+  justify-content: center;
 }
 .leaderboardStage{
-
-}
-.third{
-
+  border: solid blue;
+  display: flex;
+  justify-content: center;
+  margin-top: 6vh;
+  padding: 20px;
 }
 .stageImage{
-
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  }
+.stageText{
+  margin: 0 10px;
 }
-.thirdStage{
 
+.third{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  align-items: center;
+}
+
+.thirdStage{
+  border: solid rgb(220, 150, 80);
+  background-color:  rgb(226, 155, 84);;
+  padding: 20px 92% 0 0;
 }
 .first{
-
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  align-items: center;
 }
-.stageImage{
 
-}
 .firstStage{
-
+  border: solid rgb(255, 218, 117);
+  background-color: rgb(254, 221, 130);
+  padding: 60px 92% 0 0;
 }
 .second{
 
-}
-.stageImage{
-
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  align-items: center;
 }
 .secondStage{
-  
+  border: solid rgb(187, 187, 187);
+  background-color: rgb(182, 179, 179);
+  padding: 40px 92% 0 0;
 }
