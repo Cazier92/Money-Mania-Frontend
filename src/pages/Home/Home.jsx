@@ -6,7 +6,7 @@ import PiggyBank from "../../components/PiggyBank/PiggyBank";
 const linkStyle = {
     textDecoration: "none",
     color: "black",
-  };
+};
 
 const Home = ({currentCategory, handleChangeTrivia, user, userProfile}) => {
     return (

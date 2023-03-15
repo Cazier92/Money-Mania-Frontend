@@ -5,12 +5,3 @@
   text-decoration: none;
 }
 
-a{
-  text-decoration: none;
-  color: black;
-  font-size: 15px;
-}
-
-a::after{
-  text-decoration: none;
-}
