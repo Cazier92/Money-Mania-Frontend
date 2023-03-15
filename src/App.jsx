@@ -38,7 +38,7 @@ const App = () => {
 
   const navigate = useNavigate()
 
-  console.log(userProfile)
+
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -63,15 +63,31 @@ const App = () => {
   useEffect(() => {
     if (currentCategory !== '' && allTrivia) {
       let catTrivia = []
-      allTrivia.forEach(q => {
-        if (q.category === currentCategory) {
-          catTrivia.push(q)
+      let c = currentCategory.toLowerCase()
+      if (c === 'economics') {
+        c = 'business and economics'
+      }
+        allTrivia.forEach(q => {
+
+          if (q.category === c) {
+            catTrivia.push(q)
+            
+          }
+        })
+        if (catTrivia.length) {
+          let i = Math.floor(Math.random() * catTrivia.length)
+          setCurrentTrivia(catTrivia[i])
         }
-      })
-      let i = Math.floor(Math.random() * catTrivia.length)
-      setCurrentTrivia(catTrivia[i])
+
     }
   }, [user, allTrivia, currentCategory])
+
+
+
+  const handleChangeCategory = (category) => {
+    setCurrentCategory(category)
+    navigate('/home')
+  }
 
 
   const handleLogout = () => {
@@ -130,7 +146,7 @@ const App = () => {
           path="/categories"
           element={
             <ProtectedRoute user={user}>
-              <Categories setCurrentCategory={setCurrentCategory}/>
+              <Categories handleChangeCategory={handleChangeCategory}/>
             </ProtectedRoute>
           }
         />

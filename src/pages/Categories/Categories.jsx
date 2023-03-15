@@ -1,11 +1,11 @@
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import styles from './Categories.module.css'
 
-const Categories = ({setCurrentCategory}) => {
+const Categories = ({handleChangeCategory}) => {
   return ( 
     <main>
       <h1 className={styles.title}>Categories</h1>
-      <CategoryCard setCurrentCategory={setCurrentCategory}/>
+      <CategoryCard handleChangeCategory={handleChangeCategory}/>
     </main>
 
   );
