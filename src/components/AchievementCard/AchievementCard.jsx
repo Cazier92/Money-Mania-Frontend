@@ -1,3 +1,5 @@
+import ProgressBar from "../ProgressBar/ProgressBar"
+
 const AchievementCard = (props) => {
     const { icon, name, category, threshold, userProfile } = props
 
@@ -15,16 +17,26 @@ const AchievementCard = (props) => {
         return Math.round(percentage)
     }
 
+    const progPercentage = calculatePercentage(category, threshold, userProfile)
+
+    const fullColor = {
+        filter: 'grayscale(0)'
+    }
+
+    const grayscale = {
+        filter: 'grayscale(1)'
+    }
+
     return (
         <section>
-            <img src={icon} alt="icon" />
+            <img src={icon} alt="icon" style={progPercentage === 100 ? fullColor : grayscale} />
             <div className="details">
                 <div className="score">
                     <h3>{name}</h3>
-                    <h3>{calculatePercentage(category, threshold, userProfile)}%</h3>
+                    <h3>{progPercentage}%</h3>
                 </div>
                 <p className="how-to-earn">Answer {threshold} questions correctly in <span className="bold">{category}</span></p>
-                <p>[ - progress bar - ]</p>
+                <ProgressBar completed={progPercentage} />
             </div>
         </section>
     )

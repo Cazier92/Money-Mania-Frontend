@@ -1,0 +1,27 @@
+h2{
+  text-align: center;
+  margin-top: 10%;
+  z-index: 1;
+  font-size: 30px;
+}
+.firstp{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+.secondp{
+  margin-top: 10px;
+  text-align: center;
+}
+.circle{
+  height: 20rem;
+  width: 30rem;
+  border-radius: 1rem;
+  background-color: rgb(199, 198, 198);
+  border-radius: 0 0 20rem 20rem ;
+  position: absolute; 
+  margin-top: -45%;
+  margin-left: -14%;
+  margin-bottom: 0px;
+  z-index: -1;
+}

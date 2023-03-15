@@ -37,6 +37,8 @@ const App = () => {
   const [changeTrivia, setChangeTrivia] = useState(false)
   const [updateData, setUpdateData] = useState({})
   const [updated, setUpdated] = useState(false)
+  const [qNum, setQNum] = useState(null)
+  const [rewardClaimed, setRewardClaimed] = useState(false)
 
 
 
@@ -93,41 +95,49 @@ const App = () => {
         setUpdateData({
           taxes: (userProfile.taxes) + 1
         })
+        setQNum(userProfile.taxes)
       }
       if (currentCategory === 'Personal Finance') {
         setUpdateData({
           persFinance: (userProfile.persFinance) + 1
         })
+        setQNum(userProfile.persFinance)
       }
       if (currentCategory === 'Economics') {
         setUpdateData({
           buisEcon: (userProfile.buisEcon) + 1
         })
+        setQNum(userProfile.buisEcon)
       }
       if (currentCategory === 'Investing') {
         setUpdateData({
           investing: (userProfile.investing) + 1
         })
+        setQNum(userProfile.investing)
       }
       if (currentCategory === 'Financial History') {
         setUpdateData({
           finHistory: (userProfile.finHistory) + 1
         })
+        setQNum(userProfile.finHistory)
       }
       if (currentCategory === 'Insurance') {
         setUpdateData({
           insurance: (userProfile.insurance) + 1
         })
+        setQNum(userProfile.insurance)
       }
       if (currentCategory === 'Stock') {
         setUpdateData({
           stock: (userProfile.stock) + 1
         })
+        setQNum(userProfile.stock)
       }
       if (currentCategory === 'Financial Institution') {
         setUpdateData({
           finInst: (userProfile.finInst) + 1
         })
+        setQNum(userProfile.finInst)
       }
     }
     
@@ -194,7 +204,7 @@ const App = () => {
           path="/home"
           element={
             <ProtectedRoute user={user}>
-              <Home currentCategory={currentCategory} handleChangeTrivia={handleChangeTrivia} user={user}/>
+              <Home currentCategory={currentCategory} handleChangeTrivia={handleChangeTrivia} user={user} userProfile={userProfile}/>
             </ProtectedRoute>
           }
         />
@@ -210,16 +220,16 @@ const App = () => {
           path="/gamepage"
           element={
             <ProtectedRoute user={user}>
-              <GamePage currentTrivia={currentTrivia} handleUpdateProfile={handleUpdateProfile} setProfileData={setUpdateData} updateData={updateData} currentCategory={currentCategory} userProfile={userProfile} user={user} setUpdated={setUpdated}/>
+              <GamePage currentTrivia={currentTrivia} handleUpdateProfile={handleUpdateProfile} setProfileData={setUpdateData} updateData={updateData} currentCategory={currentCategory} userProfile={userProfile} user={user} setUpdated={setUpdated} qNum={qNum} rewardClaimed={rewardClaimed} setRewardClaimed={setRewardClaimed}/>
             </ProtectedRoute>
           }
         />
         <Route 
           path="/profile"
           element={
-            // <ProtectedRoute user={user}>
+            <ProtectedRoute user={user}>
               <Profile userProfile={userProfile}/>
-            // </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route 

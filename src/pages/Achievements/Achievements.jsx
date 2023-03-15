@@ -1,30 +1,34 @@
 import AchievementCard from "../../components/AchievementCard/AchievementCard";
 import './Achievements.css'
+import yen from '../../achievements/yen.svg'
+import usd from '../../achievements/usd.svg'
+import euro from '../../achievements/euro.svg'
+import pound from '../../achievements/pound.svg'
 
 const Achievements = (props) => {
     const { userProfile } = props
 
     const achievements = [
         {
-            icon: "",
+            icon: usd,
             name: "US Dollar",
             category: "Personal Finance",
             threshold: 10
         },
         {
-            icon: "",
+            icon: euro,
             name: "European Euro",
             category: "Taxes",
             threshold: 10
         },
         {
-            icon: "",
+            icon: yen,
             name: "Japanese Yen",
             category: "Investing",
             threshold: 10
         },
         {
-            icon: "",
+            icon: pound,
             name: "British Pound",
             category: "Global Finance",
             threshold: 10

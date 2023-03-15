@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-
+import './Home.module.css'
 import Banner from "../../components/Banner/Banner";
 import PiggyBank from "../../components/PiggyBank/PiggyBank";
 
-const Home = ({currentCategory, handleChangeTrivia}) => {
+const Home = ({currentCategory, handleChangeTrivia, user, userProfile}) => {
     return (
         <>
-            <Banner />
+            <Banner user={user} userProfile={userProfile}/>
             <PiggyBank />
             {currentCategory ? 
             (<>
