@@ -14,7 +14,7 @@ const CategoryCard = ({handleChangeCategory}) => {
     img: "../economics.svg"}, 
     {name: "Insurance", 
     img: "../insurance.svg"}, 
-    {name: "Global Finance", 
+    {name: "Investing", 
     img: "../global.svg"},  
     {name: "Stock Markets", 
     img: "../stock.svg"}, 
