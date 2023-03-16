@@ -12,7 +12,7 @@ const Achievements = (props) => {
         {
             icon: usd,
             name: "US Dollar",
-            category: "Personal Finance",
+            category: "Economics",
             threshold: 10
         },
         {
@@ -51,7 +51,7 @@ const Achievements = (props) => {
     return (
         <>
             <h2 className="achievements-header">Achievements</h2>
-            <p className="achievement-total bold">{sumAchievements(userProfile)}/180</p>
+            <p className="achievement-total bold"><i id='bt-icon' className="fa-solid fa-medal" /> {sumAchievements(userProfile)}/180</p>
             <div className="achievements">
                 {achievements.map((achievement, idx) => (
                     <div className="card-container" key={idx}>
