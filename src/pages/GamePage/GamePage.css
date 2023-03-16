@@ -21,3 +21,16 @@
   background-color: #FFFB90;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 8px;
 }
+
+.correctH {
+  font-weight: 600;
+  font-size: 2.5vmin;
+  margin-top: 3vmin;
+  margin-bottom: 0;
+}
+
+.why {
+  width: 85%;
+  font-weight: 500;
+  font-size: 2.5vmin;
+}

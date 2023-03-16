@@ -1,13 +1,16 @@
 .answer-card {
   display: flex;
   background-color: #FFFFFF;
-  width: 95%;
+  width: 90%;
   min-height: 10vmin;
   align-content: center;
   justify-content: center;
   border-radius: 10px;
   margin-top: 2vmin;
   cursor: pointer;
+  align-items: center;
+  font-weight: 500;
+  font-size: 2.5vmin;
 }
 
 .answer-card > p {

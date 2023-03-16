@@ -1,13 +1,14 @@
 .question-card {
   display: flex;
   background-color: #FFFFFF;
-  width: 95%;
+  width: 90%;
   align-content: center;
   justify-content: center;
   border-radius: 10px;
   margin-top: 2vmin;
   min-height: 20vh;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 8px;
+  align-items: center;
 }
 
 .question-card > h1 {
