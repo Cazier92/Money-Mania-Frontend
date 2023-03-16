@@ -45,7 +45,7 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
   
   return ( 
     <>
-    {q === 0 && !rewardClaimed && !crack ? (<>
+    {q === 0 && rewardClaimed === false && crack === false ? (<>
     <div className="game-page-main">
       <div className="correct-ans-div">
         <h1>Good Job!</h1>
@@ -59,7 +59,7 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
       </div>
     </div>
     </>) 
-    : q === 0 && !rewardClaimed && crack ? (<>
+    : q === 0 && rewardClaimed === false && crack ? (<>
       <ClaimReward setRewardClaimed={setRewardClaimed}/>
     </>)
     : (<>
