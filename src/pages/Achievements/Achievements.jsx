@@ -1,4 +1,4 @@
-import AchievementCard from "../../components/AchievementCard/AchievementCard";
+import AchievementCard from "../../components/AchievementCard/AchievementCard"
 import './Achievements.css'
 import yen from '../../achievements/yen.svg'
 import usd from '../../achievements/usd.svg'
@@ -61,7 +61,7 @@ const Achievements = (props) => {
                 ))}
             </div>
         </>
-    );
+    )
 }
 
-export default Achievements;
+export default Achievements
