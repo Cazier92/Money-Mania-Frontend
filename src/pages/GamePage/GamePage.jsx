@@ -45,15 +45,17 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
   return ( 
     <>
     {q === 0 && !rewardClaimed && !crack ? (<>
+    <div className="game-page-main">
       <div className="correct-ans-div">
         <h1>Good Job!</h1>
-        <div>
+        <div className="correct-ans-div">
           <QuestionCard currentTrivia={currentTrivia}/>
           <h5>Correct!</h5>
           <AnswerCard ans={answer} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>
         </div>
         <button className="claim-reward-btn" onClick={() => setCrack(true)}>Claim Reward!</button>
       </div>
+    </div>
     </>) 
     : q === 0 && !rewardClaimed && crack ? (<>
       <ClaimReward setRewardClaimed={setRewardClaimed}/>
@@ -63,20 +65,22 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
         {displayWin ? 
         (<>
           {correct ? 
-          (<div className="correct-ans-div">
+          (<div className="game-page-main">
             <h1>Good Job!</h1>
-            <div>
+            <div className="correct-ans-div">
               <QuestionCard currentTrivia={currentTrivia}/>
               <h5>Correct!</h5>
               <AnswerCard ans={answer} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>
             </div>
           </div>) 
           : 
-          (<div className="incorrect-ans-div">
+          (<div className="game-page-main">
             <h1>Oops... Try Again!</h1>
-            <QuestionCard currentTrivia={currentTrivia}/>
-            <h5>Correct Answer:</h5>
-            <AnswerCard ans={answer} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>
+            <div className="correct-ans-div">
+              <QuestionCard currentTrivia={currentTrivia}/>
+              <h5>Correct Answer:</h5>
+              <AnswerCard ans={answer} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>
+            </div>
           </div>)}
         </>) 
         : (<>
