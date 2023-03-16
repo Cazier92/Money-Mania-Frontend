@@ -5,9 +5,8 @@ const Banner = ({userProfile }) => {
             {/* <div className={styles.circle}>
             </div> */}
             <h2 className={styles.bannerh2}>Money Mania</h2>
-            <p className={styles.firstp}>Welcome back,
-                {userProfile ? <p className={styles.secondp}>{userProfile.name}!</p> : null}
-            </p>
+            <p className={styles.firstp}>Welcome back,</p>
+            {userProfile ? <p className={styles.secondp}>{userProfile.name}!</p> : null}
         </main>
     )
 }

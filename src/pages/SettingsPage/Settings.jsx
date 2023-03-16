@@ -10,41 +10,41 @@ const Settings = ({handleLogout}) => {
     </div>
   <div className="flexSettings">
     <h3 className="settingsText">Sound</h3>
-    <div class="switch-toggle">
-      <div class="button-check" id="button-check">
-        <input type="checkbox" class="checkbox"></input>
-        <span class="switch-btn"></span>
-        <span class="layer"></span>
+    <div className="switch-toggle">
+      <div className="button-check" id="button-check">
+        <input type="checkbox" className="checkbox"></input>
+        <span className="switch-btn"></span>
+        <span className="layer"></span>
       </div>
     </div>
   </div>
   <div className="flexSettings">
     <h3 className="settingsText">Music</h3>
-    <div class="switch-toggle">
-      <div class="button-check" id="button-check1">
-        <input type="checkbox" class="checkbox"></input>
-        <span class="switch-btn"></span>
-        <span class="layer"></span>
+    <div className="switch-toggle">
+      <div className="button-check" id="button-check1">
+        <input type="checkbox" className="checkbox"></input>
+        <span className="switch-btn"></span>
+        <span className="layer"></span>
       </div>
     </div>
   </div>
   <div className="flexSettings"> 
     <h3 className="settingsText">Vibrations</h3>
-    <div class="switch-toggle">
-      <div class="button-check" id="button-check2">
-        <input type="checkbox" class="checkbox"></input>
-        <span class="switch-btn"></span>
-        <span class="layer"></span>
+    <div className="switch-toggle">
+      <div className="button-check" id="button-check2">
+        <input type="checkbox" className="checkbox"></input>
+        <span className="switch-btn"></span>
+        <span className="layer"></span>
       </div>
     </div>
   </div>
   <div className="flexSettings">
     <h3 className="settingsText" >Notifications</h3>
-    <div class="switch-toggle">
-      <div class="button-check" id="button-check3">
-        <input type="checkbox" class="checkbox"></input>
-        <span class="switch-btn"></span>
-        <span class="layer"></span>
+    <div className="switch-toggle">
+      <div className="button-check" id="button-check3">
+        <input type="checkbox" className="checkbox"></input>
+        <span className="switch-btn"></span>
+        <span className="layer"></span>
       </div>
     </div>
   </div>
