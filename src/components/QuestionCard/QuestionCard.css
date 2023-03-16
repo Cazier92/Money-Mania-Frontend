@@ -12,6 +12,7 @@
 }
 
 .question-card > h1 {
-  font-size: 6vmin;
+  font-size: 5vmin;
   padding: 0 5vmin;
+  margin: 0;
 }
