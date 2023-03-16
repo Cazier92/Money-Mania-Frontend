@@ -1,11 +1,7 @@
 import './Settings.css'
 import { Link } from "react-router-dom";
-const Settings = () => {
+const Settings = ({handleLogout}) => {
 
-  const clearLocalStorage = ({signOut}) =>{
-    localStorage.clear();
-    signOut();
-  }
 
   return (
   <div className="settingsContainer">
@@ -55,7 +51,7 @@ const Settings = () => {
 
   <div className="signOutContainer">
     <Link to={'/'}>
-    <button className="signOut" onClick={clearLocalStorage}> Sign Out </button> 
+    <button className="signOut" onClick={handleLogout}> Sign Out </button> 
     </Link>
   </div>
 
