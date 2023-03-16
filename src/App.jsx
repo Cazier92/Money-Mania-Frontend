@@ -143,7 +143,6 @@ const App = () => {
     
   }, [userProfile, currentCategory])
 
-  console.log(currentCategory)
 
 
   const handleChangeCategory = (category) => {
