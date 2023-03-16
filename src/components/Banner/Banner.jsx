@@ -6,7 +6,7 @@ const Banner = ({userProfile }) => {
             </div> */}
             <h2 className={styles.bannerh2}>Money Mania</h2>
             <p className={styles.firstp}>Welcome back,
-                {userProfile.name ? <p className={styles.secondp}>{userProfile.name}!</p> : null}
+                {userProfile ? <p className={styles.secondp}>{userProfile.name}!</p> : null}
             </p>
         </main>
     )
