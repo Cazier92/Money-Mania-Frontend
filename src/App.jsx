@@ -41,7 +41,6 @@ const App = () => {
   const [rewardClaimed, setRewardClaimed] = useState(false)
 
 
-
   const navigate = useNavigate()
 
 
@@ -221,7 +220,7 @@ const App = () => {
           path="/gamepage"
           element={
             <ProtectedRoute user={user}>
-              <GamePage currentTrivia={currentTrivia} handleUpdateProfile={handleUpdateProfile} setProfileData={setUpdateData} updateData={updateData} currentCategory={currentCategory} userProfile={userProfile} user={user} setUpdated={setUpdated} qNum={qNum} rewardClaimed={rewardClaimed} setRewardClaimed={setRewardClaimed}/>
+              <GamePage currentTrivia={currentTrivia} handleUpdateProfile={handleUpdateProfile} setProfileData={setUpdateData} updateData={updateData} currentCategory={currentCategory} userProfile={userProfile} user={user} setUpdated={setUpdated} qNum={qNum} rewardClaimed={rewardClaimed} setRewardClaimed={setRewardClaimed} handleChangeTrivia={handleChangeTrivia}/>
             </ProtectedRoute>
           }
         />
