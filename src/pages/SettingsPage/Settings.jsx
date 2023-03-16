@@ -51,7 +51,7 @@ const Settings = ({handleLogout}) => {
 
   <div className="signOutContainer">
     <Link to={'/'}>
-    <button className="signOut" onClick={handleLogout}> Sign Out </button> 
+    <button className="signOut" onClick={handleLogout}> Sign Out </button>
     </Link>
   </div>
 
