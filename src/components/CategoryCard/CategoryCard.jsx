@@ -25,9 +25,9 @@ const CategoryCard = ({handleChangeCategory}) => {
   return ( 
     <main className={styles.categoryList}>
     {categories.map((category, idx) => 
-    <>
-      <p className={styles.category} onClick={() => handleChangeCategory(category.name)}> <img className={styles.icon} src={category.img} alt="" />{category.name}</p>
-    </>
+    <div key={idx}>
+      <p className={styles.category} onClick={() => handleChangeCategory(category.name)} > <img className={styles.icon} src={category.img} alt="" />{category.name}</p>
+    </div>
     )}
     </main>
   );
