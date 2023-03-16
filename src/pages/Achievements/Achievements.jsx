@@ -37,14 +37,14 @@ const Achievements = (props) => {
 
     function sumAchievements(data) {
         let currencies = 0
-        if (data.persFinance >= 10) { currencies += 1 }
-        if (data.buisEcon >= 10) { currencies += 1 }
-        if (data.investing >= 10) { currencies += 1 }
-        if (data.taxes >= 10) { currencies += 1 }
-        if (data.finHistory >= 10) { currencies += 1 }
-        if (data.insurance >= 10) { currencies += 1 }
-        if (data.stock >= 10) { currencies += 1 }
-        if (data.finInst >= 10) { currencies += 1 }
+        if (data?.persFinance >= 10) { currencies += 1 }
+        if (data?.buisEcon >= 10) { currencies += 1 }
+        if (data?.investing >= 10) { currencies += 1 }
+        if (data?.taxes >= 10) { currencies += 1 }
+        if (data?.finHistory >= 10) { currencies += 1 }
+        if (data?.insurance >= 10) { currencies += 1 }
+        if (data?.stock >= 10) { currencies += 1 }
+        if (data?.finInst >= 10) { currencies += 1 }
         return currencies
     }
 
