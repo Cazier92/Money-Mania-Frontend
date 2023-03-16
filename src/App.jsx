@@ -1,6 +1,6 @@
 // npm modules
 import { useState, useEffect } from 'react'
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // page components
 import Signup from './pages/Signup/Signup'
@@ -84,7 +84,6 @@ const App = () => {
           let i = Math.floor(Math.random() * catTrivia.length)
           setCurrentTrivia(catTrivia[i])
         }
-
     }
   }, [user, allTrivia, currentCategory, changeTrivia])
 
@@ -146,7 +145,7 @@ const App = () => {
 
   const handleChangeCategory = (category) => {
     setCurrentCategory(category)
-    navigate('/home')
+    navigate('/gamepage')
   }
 
 
@@ -165,7 +164,6 @@ const App = () => {
   }
 
   const handleUpdateProfile = async (data, id) => {
-    console.log(data)
     await profileService.update(data, id)
   }
 
