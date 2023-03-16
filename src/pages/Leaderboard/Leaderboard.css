@@ -73,7 +73,7 @@
 .third {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   text-align: center;
   align-items: center;
 }
@@ -88,7 +88,7 @@
 .first {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   text-align: center;
   align-items: center;
 }
@@ -102,7 +102,7 @@
 .second {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   text-align: center;
   align-items: center;
 }
