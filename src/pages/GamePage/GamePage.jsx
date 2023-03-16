@@ -12,6 +12,7 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
   const [id, setId] = useState('')
   const [crack, setCrack] = useState(false)
   const fillerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  const fillerWhy ='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
   let answer
   let q = qNum % 10
 
@@ -50,8 +51,9 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
         <h1>Good Job!</h1>
         <div className="correct-ans-div">
           <QuestionCard currentTrivia={currentTrivia}/>
-          <h5>Correct!</h5>
+          <h5 className="correctH">Correct!</h5>
           <AnswerCard ans={answer} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>
+          <p className="why"><strong>WHY?</strong> {fillerWhy}</p>
         </div>
         <button className="claim-reward-btn" onClick={() => setCrack(true)}>Claim Reward!</button>
       </div>
@@ -69,8 +71,9 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
             <h1>Good Job!</h1>
             <div className="correct-ans-div">
               <QuestionCard currentTrivia={currentTrivia}/>
-              <h5>Correct!</h5>
+              <h5 className="correctH">Correct!</h5>
               <AnswerCard ans={answer} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>
+              <p className="why"><strong>WHY?</strong> {fillerWhy}</p>
             </div>
           </div>) 
           : 
@@ -78,8 +81,9 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
             <h1>Oops... Try Again!</h1>
             <div className="correct-ans-div">
               <QuestionCard currentTrivia={currentTrivia}/>
-              <h5>Correct Answer:</h5>
+              <h5 className="correctH">Correct Answer:</h5>
               <AnswerCard ans={answer} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>
+              <p className="why"><strong>WHY?</strong> {fillerWhy}</p>
             </div>
           </div>)}
         </>) 
