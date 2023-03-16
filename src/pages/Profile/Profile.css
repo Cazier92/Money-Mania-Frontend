@@ -1,5 +1,4 @@
 .profileContainer{
-border: solid red;
 }
 
 .profileTitleContainer{
@@ -34,8 +33,9 @@ border: solid red;
 }
 
 .statsProfileContainer{
-border: solid orange;
+
 background-color: white;
+margin-bottom: 40px;
 }
 
 .statsProfile{
@@ -43,12 +43,12 @@ border-bottom: solid gray;
 }
 
 .statsTitle{
-  padding: 0 20px;
-  margin: 16px 0 0 0;
+  padding: 20px 20px 0 20px;
+  margin: 0 0 0 0;
 }
 
 .statsText{
-  padding: 0 20px;
+  padding: 10px 20px 0 20px;
   margin: 10px;
 }
 
