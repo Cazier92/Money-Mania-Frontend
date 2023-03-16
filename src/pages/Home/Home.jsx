@@ -8,22 +8,21 @@ const linkStyle = {
     color: "black",
 };
 
-const Home = ({currentCategory, handleChangeTrivia, user, userProfile}) => {
+const Home = ({ currentCategory, handleChangeTrivia, userProfile }) => {
     return (
         <>
-            <Banner user={user} userProfile={userProfile}/>
+            <Banner userProfile={userProfile} />
             <PiggyBank />
-            {currentCategory ? 
-            (<>
-            
-                <h2>Category: {currentCategory}</h2>
-                <div className="home-btn-div">
-                    <button onClick={handleChangeTrivia} className='homeButton'><Link to='/gamepage' style={linkStyle}>Continue Trivia</Link></button>
-                    <button className='homeButton'><Link to='/categories' style={linkStyle}>Change Category</Link></button>
-                </div>
-            </>) : (<div className="home-btn-div">
-                <button className='homeButton'><Link to='/categories' style={linkStyle}>Choose Category</Link></button>
-            </div>)}
+            {currentCategory ?
+                (<>
+                    <h2>Category: {currentCategory}</h2>
+                    <div className="home-btn-div">
+                        <Link to='/gamepage' style={linkStyle}><button onClick={handleChangeTrivia} className='homeButton'>Continue Trivia</button></Link>
+                        <Link to='/categories' style={linkStyle}><button className='homeButton'>Change Category</button></Link>
+                    </div>
+                </>) : (<div className="home-btn-div">
+                    <Link to='/categories' style={linkStyle}><button className='homeButton'>Choose Category</button></Link>
+                </div>)}
         </>
     );
 }

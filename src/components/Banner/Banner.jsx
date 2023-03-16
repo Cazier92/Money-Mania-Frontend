@@ -1,14 +1,13 @@
 import styles from './Banner.module.css'
-const Banner = ({user, userProfile}) => {
+const Banner = ({userProfile }) => {
     return (
         <main>
             {/* <div className={styles.circle}>
             </div> */}
-                <h2 className={styles.bannerh2}>Money Mania</h2>
-                <p className={styles.firstp}>Welcome back, </p>
-                {userProfile.name ? (<>
-                <p className={styles.secondp}>{userProfile.name}</p>
-                </>) : (<></>)}
+            <h2 className={styles.bannerh2}>Money Mania</h2>
+            <p className={styles.firstp}>Welcome back,
+                {userProfile.name ? <p className={styles.secondp}>{userProfile.name}!</p> : null}
+            </p>
         </main>
     )
 }
