@@ -1,6 +1,6 @@
 .answer-card {
   display: flex;
-  background-color: rgba(215, 210, 200, 1);
+  background-color: #FFFFFF;
   width: 95%;
   min-height: 10vmin;
   align-content: center;
@@ -19,9 +19,11 @@
 }
 
 #correct {
-  background-color: green;
+  background-color: #A1F683;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 8px;
 }
 
 #incorrect {
-  background-color: red;
+  background-color: #FF655B;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 8px;
 }
