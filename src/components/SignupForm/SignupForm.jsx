@@ -11,7 +11,7 @@ const SignupForm = props => {
     password: '',
     passwordConf: '',
   })
-  const [photoData, setPhotoData] = useState({})
+  // const [photoData, setPhotoData] = useState({})
 
   const handleChange = e => {
     props.updateMessage('')
@@ -21,14 +21,16 @@ const SignupForm = props => {
     })
   }
 
-  const handleChangePhoto = (evt) => {
-    setPhotoData({ photo: evt.target.files[0] })
-  }
+  // const handleChangePhoto = (evt) => {
+  //   setPhotoData({ photo: evt.target.files[0] })
+  // }
 
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      await authService.signup(formData, photoData.photo)
+      await authService.signup(formData, 
+        // photoData.photo
+        )
       props.handleSignupOrLogin()
       navigate('/')
     } catch (err) {
