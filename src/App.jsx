@@ -1,6 +1,6 @@
 // npm modules
 import { useState, useEffect } from 'react'
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // page components
 import Signup from './pages/Signup/Signup'
@@ -39,7 +39,6 @@ const App = () => {
   const [updated, setUpdated] = useState(false)
   const [qNum, setQNum] = useState(null)
   const [rewardClaimed, setRewardClaimed] = useState(false)
-
 
 
   const navigate = useNavigate()
@@ -85,7 +84,6 @@ const App = () => {
           let i = Math.floor(Math.random() * catTrivia.length)
           setCurrentTrivia(catTrivia[i])
         }
-
     }
   }, [user, allTrivia, currentCategory, changeTrivia])
 
@@ -147,7 +145,7 @@ const App = () => {
 
   const handleChangeCategory = (category) => {
     setCurrentCategory(category)
-    navigate('/home')
+    navigate('/gamepage')
   }
 
 
@@ -166,7 +164,6 @@ const App = () => {
   }
 
   const handleUpdateProfile = async (data, id) => {
-    console.log(data)
     await profileService.update(data, id)
   }
 
@@ -221,7 +218,7 @@ const App = () => {
           path="/gamepage"
           element={
             <ProtectedRoute user={user}>
-              <GamePage currentTrivia={currentTrivia} handleUpdateProfile={handleUpdateProfile} setProfileData={setUpdateData} updateData={updateData} currentCategory={currentCategory} userProfile={userProfile} user={user} setUpdated={setUpdated} qNum={qNum} rewardClaimed={rewardClaimed} setRewardClaimed={setRewardClaimed}/>
+              <GamePage currentTrivia={currentTrivia} handleUpdateProfile={handleUpdateProfile} setProfileData={setUpdateData} updateData={updateData} currentCategory={currentCategory} userProfile={userProfile} user={user} setUpdated={setUpdated} qNum={qNum} rewardClaimed={rewardClaimed} setRewardClaimed={setRewardClaimed} handleChangeTrivia={handleChangeTrivia}/>
             </ProtectedRoute>
           }
         />

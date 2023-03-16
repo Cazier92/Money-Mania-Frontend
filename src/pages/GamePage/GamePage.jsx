@@ -6,7 +6,7 @@ import ClaimReward from "../../components/ClaimReward/ClaimReward";
 
 import './GamePage.css'
 
-const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpdated, userProfile, qNum, rewardClaimed, setRewardClaimed}) => {
+const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpdated, qNum, rewardClaimed, setRewardClaimed, handleChangeTrivia}) => {
   const [displayWin, setDisplayWin] = useState(false)
   const [correct, setCorrect] = useState(false)
   const [id, setId] = useState('')
@@ -42,6 +42,13 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
     }
   }
 
+  const handleNewQ = () => {
+    handleChangeTrivia()
+    setCorrect(false)
+    setDisplayWin(false)
+    setId('')
+  }
+
   
   return ( 
     <>
@@ -74,6 +81,7 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
               <h5 className="correctH">Correct!</h5>
               <AnswerCard ans={answer} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>
               <p className="why"><strong>WHY?</strong> {fillerWhy}</p>
+              <button className="next-q-btn" onClick={() => handleNewQ()}>Next Question</button>
             </div>
           </div>) 
           : 
@@ -84,6 +92,7 @@ const GamePage = ({currentTrivia, updateData, handleUpdateProfile, user, setUpda
               <h5 className="correctH">Correct Answer:</h5>
               <AnswerCard ans={answer} currentTrivia={currentTrivia} resp={'a'} handleClick={handleClick} id={id}/>
               <p className="why"><strong>WHY?</strong> {fillerWhy}</p>
+              <button className="next-q-btn" onClick={() => handleNewQ()}>Next Question</button>
             </div>
           </div>)}
         </>) 

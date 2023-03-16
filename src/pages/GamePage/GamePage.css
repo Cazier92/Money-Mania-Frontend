@@ -18,7 +18,7 @@
   font-size: 3vmin;
   border-radius: 10px;
   border-color: #BCB500;
-  background-color: #FFFB90;
+  background-color: #FFF967;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 8px;
 }
 
@@ -33,4 +33,14 @@
   width: 85%;
   font-weight: 500;
   font-size: 2.5vmin;
+}
+
+.next-q-btn {
+  margin-top: 2vmin;
+  padding: 1vmin 4vmin;
+  font-size: 3vmin;
+  border-radius: 10px;
+  border-color: #BCB500;
+  background-color: #FFF967;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 8px;
 }
