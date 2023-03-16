@@ -1,58 +1,19 @@
-import styles from './FriendCard.module.css'
+import './FriendCard.css'
+
 const FriendCard = () => {
   return (  
-    <main>
-      <div className={styles.FriendCard}>
-        <div>
-          <img className={styles.pic} src="../guest.png" alt="pic" srcset=""/>
-        </div>
-        <div className={styles.friendDetails}>
-          <p>Friend</p>
-          <p>UK</p>
-          <p>32/180 <i id='bt-icon' className="fa-solid fa-medal"></i></p>
-        </div>
-      </div>
-      <div className={styles.FriendCard}>
-        <div>
-          <img className={styles.pic} src="../guest.png" alt="pic" srcset=""/>
-        </div>
-        <div className={styles.friendDetails}>
-          <p>Friend</p>
-          <p>United States</p>
-          <p>19/180 <i id='bt-icon' className="fa-solid fa-medal"></i></p>
-        </div>
-      </div>
-      <div className={styles.FriendCard}>
-        <div>
-          <img className={styles.pic} src="../guest.png" alt="pic" srcset=""/>
-        </div>
-        <div className={styles.friendDetails}>
-          <p>Friend</p>
-          <p>Mexico</p>
-          <p>3/180 <i id='bt-icon' className="fa-solid fa-medal"></i></p>
-        </div>
-      </div>
-      <div className={styles.FriendCard}>
-        <div>
-          <img className={styles.pic} src="../guest.png" alt="pic" srcset=""/>
-        </div>
-        <div className={styles.friendDetails}>
-          <p>Friend</p>
-          <p>India</p>
-          <p>89/180 <i id='bt-icon' className="fa-solid fa-medal"></i></p>
-        </div>
-      </div>
-      <div className={styles.FriendCard}>
-        <div>
-          <img className={styles.pic} src="../guest.png" alt="pic" srcset=""/>
-        </div>
-        <div className={styles.friendDetails}>
-          <p>Friend</p>
-          <p>Canada</p>
-          <p>23/180 <i id='bt-icon' className="fa-solid fa-medal"></i></p>
-        </div>
-      </div>
-    </main>
+  <div className="leaderListSection">
+    <div className="leaderboardListContainer">
+      <img className="stageImage" src="https://imgur.com/OYCmlJW.jpg" alt="" />
+      <p className="nameText">Friends name</p>
+      <p className="orderText"> 32/180</p>
+    </div>
+    <div className="leaderboardListContainer">
+      <img className="stageImage" src="https://imgur.com/OYCmlJW.jpg" alt="" />
+      <p className="nameText">Best friends name</p>
+      <p className="orderText"> 32/180</p>
+    </div>
+  </div>
   );
 }
 

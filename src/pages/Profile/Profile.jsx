@@ -1,5 +1,5 @@
 import FriendCard from "../../components/FriendCard/FriendCard";
-import styles from './Profile.module.css'
+import './Profile.css'
 import { useState } from "react";
 const Profile = () => {
 
@@ -13,65 +13,64 @@ const Profile = () => {
   }
 
   return ( 
-    <>
-      <div className={styles.profileHeader}>
-        <p> ◀ </p>
+    <div className="profileContainer">
+      <div className="profileTitleContainer">
         <p>Profile</p>
-        <p> <i id='bt-icon' class='fa-solid fa-house'></i> </p>
       </div>
-      <div className={styles.linkSection}>
-        <p>
-          <button className={styles.linkHeader} onClick={friendView}>
+      <div className="addFriendIcon">
+        <i id="bt-icon" className="fa-solid fa-user "></i>
+      </div>
+      <div className="profileFlex">
+          <img className="profileImage" src="https://imgur.com/OYCmlJW.jpg" alt="" />
+          <div className="profileFlex2">
+            <p className="profileTitle" >name</p>
+            <p className="profileText" >@name</p>
+            <button className="editProBtn">Edit Profile</button>
+          </div>
+      </div>
+      <div className="btnContainerProfile">
+          <button className="friendsBtnProfile" onClick={friendView}>
             Friends
           </button> 
-        </p>
-        <p > 
-          <button className={styles.profilePic} >
-            <i id="bt-icon" class="fa-solid fa-user "></i>
-          </button> 
-        </p>
-        <p>
-          <button className={styles.linkHeader} onClick={statView}>
+          <button className="statsBtnProfile" onClick={statView}>
             Stats
           </button> 
-        </p>
       </div>
-      <hr />
       {view === "friend" && 
       <FriendCard/>
       }
       {view === "stats" && 
-      <div >
-        <div className={styles.stats}>
-          <h3 className={styles.profileh3}>Total Questions Seen</h3>
-          <p>3</p>
+      <div className="statsProfileContainer" >
+        <div className="statsProfile">
+          <h3 className="statsTitle">Total Questions Seen</h3>
+          <p className="statsText" >3</p>
         </div>
-          <hr />
-        <div className={styles.stats}>
-          <h3 className={styles.profileh3}>Correct Answers</h3>
-          <p>5</p>
+     
+        <div className="statsProfile">
+          <h3 className="statsTitle">Correct Answers</h3>
+          <p className="statsText">5</p>
         </div>
-          <hr />
-        <div className={styles.stats}>
-          <h3 className={styles.profileh3}>Best Streak</h3>
-          <p>2</p>
+    
+        <div className="statsProfile">
+          <h3 className="statsTitle">Best Streak</h3>
+          <p className="statsText">2</p>
         </div>
-          <hr />
-        <div className={styles.stats}>
-          <h3 className={styles.profileh3}>Favorite Category</h3>
-          <p>Economics</p>
-          <p>12 correct answers </p>
+       
+        <div className="statsProfile">
+          <h3 className="statsTitle">Favorite Category</h3>
+          <p className="statsText">Economics</p>
+          <p className="statsText">12 correct answers </p>
         </div>
-          <hr />
-        <div className={styles.stats}>
-          <h3 className={styles.profileh3}>Least Favorite Category</h3>
-          <p>Stock Market</p>
-          <p>0 correct answers</p>
+          
+        <div className="statsProfile">
+          <h3 className="statsTitle">Least Favorite Category</h3>
+          <p className="statsText">Stock Market</p>
+          <p className="statsText">0 correct answers</p>
         </div>
       </div>
         
       }
-    </>
+    </div>
   );
 }
 
