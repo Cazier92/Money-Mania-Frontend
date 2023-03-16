@@ -18,13 +18,10 @@
 
 .circle {
   height: 20rem;
-  width: 30rem;
-  border-radius: 1rem;
-  background-color: rgb(199, 198, 198);
-  border-radius: 0 0 20rem 20rem;
+  width: 100vw;
+  background-color: #fff967;
+  border-radius: 0 0 50% 50%;
   position: absolute;
-  margin-top: -45%;
-  margin-left: -14%;
-  margin-bottom: 0px;
+  top: 0;
   z-index: -1;
 }
