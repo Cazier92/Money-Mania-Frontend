@@ -39,3 +39,23 @@
 .your-reward {
   margin: 0;
 }
+
+@media screen and (max-width: 420px) {
+  .crack-pig {
+    margin-top: 25vh;
+  }
+
+  .reward-pig {
+    margin-top: 10vh;
+  }
+
+  .currency-name {
+    margin-top: 3vh;
+    margin-bottom: 0;
+  }
+
+  .achievement-btn {
+    font-size: 2.5vh;
+    margin-top: 2vh;
+  }
+}
