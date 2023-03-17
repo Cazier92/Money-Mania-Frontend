@@ -1,5 +1,7 @@
 # Money Mania
 
+Runner Up Winner of 2023 General Assembly Spring Hackathon!
+
 Money Mania is a trivia app created to bring gamification to financial literacy education. Designed to target high school aged kids core principles as they prepare for the world, it brings a fun spin to education for anyone looking to brush up their skills and knowledge of financial literacy!
 
 ## Getting Started
