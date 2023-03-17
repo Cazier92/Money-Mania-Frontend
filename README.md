@@ -1,5 +1,6 @@
 # Money Mania
 
+Money Mania is a trivia app created to bring gamification to financial literacy education. Designed to target high school aged kids core principles as they prepare for the world, it brings a fun spin to education for anyone looking to brush up their skills and knowledge of financial literacy!
 
 ## Getting Started
 
@@ -48,6 +49,12 @@ UX:
   <a href='#'><img src='https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)'></a>
   <a href='#'><img src='https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white'></a>
 </div>
+
+## Next Steps [Ice Box] 🧊
+
+- [ ] Introduce new game modes to expand user interactivity, including a trivia wheel and survival mode
+- [ ] Friend requests
+- [ ] Allow users to challenge friends one-on-one or in groups
 
 ## Credits & Other Contributions
 
