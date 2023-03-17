@@ -14,8 +14,8 @@ const Home = ({ currentCategory, handleChangeTrivia, userProfile }) => {
                 (<>
                     <div className="home-btn-div">
                         <h2>Category: {currentCategory}</h2>
-                        <Link to='/gamepage'><img src={continueTrivia} onClick={handleChangeTrivia} alt="continue" /></Link>
-                        <Link to='/categories'><img src={changeCat} alt="change" /></Link>
+                        <Link to='/gamepage'><img src={continueTrivia} onClick={handleChangeTrivia} alt="continue" className="btn-img"/></Link>
+                        <Link to='/categories'><img src={changeCat} alt="change" className="btn-img"/></Link>
                     </div>
                 </>) : (<div className="home-btn-div">
                     <Link to='/categories'><button className='homeButton'>Choose Category</button></Link>

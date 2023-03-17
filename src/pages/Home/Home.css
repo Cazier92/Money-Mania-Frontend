@@ -15,3 +15,14 @@
   gap: 12px;
   width: auto;
 }
+
+@media screen and (max-width: 420px) {
+  .btn-img {
+    width: 62vmin;
+  }
+
+  .homeButton {
+    margin-top: 8vh;
+    width: 62vmin;
+  }
+}
