@@ -13,3 +13,20 @@
   margin-bottom: 50px;
   height: 250px;
 }
+
+@media screen and (max-width: 420px) {
+  .coin {
+    height: 5vh;
+    margin-top: 3vh;
+  }
+
+  .pig {
+    height: 22vh;
+    margin-bottom: 0;
+    margin-top: 5vh;
+  }
+
+  .pigDiv {
+    margin-top: 0;
+  }
+}

@@ -54,7 +54,7 @@ const ClaimReward = ({setRewardClaimed}) => {
         <>
           <img src={Pig5} alt="" className='reward-pig'/>
           <p className='your-reward'>Your Reward:</p>
-          <h1>Japanese Yen!</h1>
+          <h1 className='currency-name'>Japanese Yen!</h1>
           <button onClick={() => handleClick()} className='achievement-btn'>Add to Achievements</button>
         </>
       )

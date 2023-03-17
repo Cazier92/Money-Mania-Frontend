@@ -25,3 +25,19 @@
   top: 0;
   z-index: -1;
 }
+
+@media screen and (max-width: 420px) {
+  .bannerh2 {
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-size: 5vh;
+  }
+
+  .circle {
+    height: 28vh;
+  }
+
+  .firstp {
+    margin-top: 0;
+  }
+}
