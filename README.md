@@ -12,6 +12,8 @@ Money Mania is a trivia app created to bring gamification to financial literacy 
 
 📒 [Figma](https://www.figma.com/file/OTRsNezZPW1EEjIBHsHjco/Team-4---Money-Mania?t=08mFt6lutK9Lmhc6-0) has been used for planning.
 
+📈 [Presentation](https://www.figma.com/proto/ZUjBDXXJ0dH1Svt7zJis18/2nd-hackathon-presentation?page-id=0%3A1&node-id=1-301&viewport=139%2C283%2C0.23&scaling=contain&starting-point-node-id=1%3A301) slideshow.
+
 ## Screenshots
 
 <img src='/public/homeScreenshot.png' alt='Photo of app home page'>
