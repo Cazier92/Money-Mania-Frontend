@@ -4,6 +4,8 @@ Runner Up Winner of 2023 General Assembly Spring Hackathon!
 
 Money Mania is a trivia app created to bring gamification to financial literacy education. Designed to target high school aged kids core principles as they prepare for the world, it brings a fun spin to education for anyone looking to brush up their skills and knowledge of financial literacy!
 
+![Screenshot from 2023-03-18 11-32-36](https://user-images.githubusercontent.com/115664302/226116009-90a3b3c4-76db-4d7f-a58f-f6de9264627f.png)
+
 ## Getting Started
 
 🖱️ [Click Here](https://moneymania.netlify.app/home) to have access to our application.
@@ -16,9 +18,12 @@ Money Mania is a trivia app created to bring gamification to financial literacy 
 
 ## Screenshots
 
-<img src='/public/homeScreenshot.png' alt='Photo of app home page'>
-<img src='/public/correctScreenshot.png' alt='Photo of a correct answer'>
-<img src='/public/rewardScreenshot.png' alt='Photo of trivia reward'>
+<img src='/public/homeScreenshot.png' alt='App home page'>
+<img src='/public/correctScreenshot.png' alt='Correct answer'>
+<img src='/public/rewardScreenshot.png' alt='Trivia reward'>
+
+<img src="https://user-images.githubusercontent.com/115664302/226116028-7f529eeb-1229-4129-8bd3-9137b6acce15.PNG" alt="App welcome page" width=24% /> <img src="https://user-images.githubusercontent.com/115664302/226116029-d547cb6e-6c99-48a3-9db0-e8e842b0a5d1.PNG" alt="Smashing piggy bank animation" width=24% /> <img src="https://user-images.githubusercontent.com/115664302/226116032-0cb65189-10a5-4b44-82b6-e97119e04618.PNG" alt="Unlocking yen achievement" width=24% /> <img src="https://user-images.githubusercontent.com/115664302/226116035-f9a29e98-cd2f-4f46-9898-367b34af5c94.PNG" alt="Achievements page" width=24% />
+
 
 ## Our Team:
 
